@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Estimate sheets or panels required for a wall with flexible metric and imperial units."><meta name="theme-color" content="#141714"><title>Material Quantity Estimator | Tayal Associates</title><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141714'/%3E%3Cpath d='M14 16h36v8H36v26h-8V24H14z' fill='%23caa46c'/%3E%3C/svg%3E"><style>:root {
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="Estimate sheets or panels required for a wall with flexible metric and imperial units."><meta name="theme-color" content="#141714"><title>Material Quantity Estimator | Tayal Associates</title><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141714'/%3E%3Cpath d='M14 16h36v8H36v26h-8V24H14z' fill='%23caa46c'/%3E%3C/svg%3E"><style>:root {
   --ink: #151612;
   --ink-soft: #25261f;
   --paper: #f4f1e9;
@@ -608,7 +608,11 @@ body { background: var(--paper); }
 .directory-grid a:hover i { transform: translate(4px, -4px); }
 .editorial-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 600px; background: #d8cebc; }
 .editorial-split__image { min-height: 600px; overflow: hidden; }
+.editorial-split__image { position: relative; isolation: isolate; }
 .editorial-split__image img { width: 100%; height: 100%; object-fit: cover; }
+.image-credit { position: absolute; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); display: inline-flex; min-height: 44px; align-items: center; gap: 10px; padding: 8px 14px; background: rgba(18,22,18,.82); color: #fff; font: 600 .7rem/1.2 var(--sans); letter-spacing: .04em; backdrop-filter: blur(10px); }
+.image-credit:hover { background: #1f2a21; }
+.image-credit:focus-visible { outline-color: #fff; }
 .editorial-split__copy { align-self: center; max-width: 680px; padding: clamp(40px, 7vw, 110px); }
 .editorial-split__copy h2, .closing-cta h2, .office-invite h2 { margin: 0; font: 500 clamp(2.8rem, 4.6vw, 5.4rem)/1.03 var(--serif); letter-spacing: -.045em; }
 .editorial-split__copy h2 em, .office-invite h2 em { color: #74552d; }
@@ -697,7 +701,7 @@ body[data-page="contact"] .mobile-cta, body:not([data-page="home"]) .mobile-cta 
   .directory-grid strong { font-size: 2.35rem; }
   .directory-grid i { right: 26px; top: 24px; }
   .editorial-split { display: flex; flex-direction: column; }
-  .editorial-split__image { min-height: 330px; height: 55vw; }
+  .editorial-split__image { min-height: 0; height: auto; aspect-ratio: 4 / 3; }
   .editorial-split__copy { padding: 56px 22px 64px; }
   .closing-cta h2 { font-size: clamp(2.8rem, 11vw, 4.2rem); }
   .volume-menu { display: flex; margin: 0 -16px 48px 0; padding: 2px 16px 14px 0; }
@@ -802,6 +806,43 @@ body[data-page="contact"] .mobile-cta, body:not([data-page="home"]) .mobile-cta 
 }
 @media (prefers-reduced-motion: reduce) {
   .material-feature img, .material-feature__copy i, .material-index a, .drive-card__enquiry, .size-preset { transition: none; }
+}
+
+/* Device safe areas, short landscape screens, and system high-contrast modes */
+@media (max-width: 680px) {
+  .brand { min-height: 44px; }
+  .menu-button { width: 44px; min-width: 44px; height: 44px; }
+  .mobile-cta a { min-height: 44px; }
+  .text-link { min-height: 44px; align-items: center; }
+  .size-preset { min-height: 44px; }
+  .unit-picker { min-height: 44px; }
+  .field-grid input[type="number"], .field-grid select { min-height: 44px; }
+  .wastage-control input[type="range"], input[type="range"] { min-height: 44px; }
+  .mobile-cta {
+    inset-inline-start: max(8px, env(safe-area-inset-left));
+    inset-inline-end: max(8px, env(safe-area-inset-right));
+    inset-block-end: max(8px, env(safe-area-inset-bottom));
+  }
+  body { padding-block-end: calc(64px + env(safe-area-inset-bottom)); }
+  .footer__links a { display: inline-flex; min-height: 44px; align-items: center; }
+}
+@media (max-width: 900px) and (orientation: landscape) and (max-height: 520px) {
+  .hero { min-height: max(520px, 100vh); min-height: max(520px, 100svh); }
+  .hero__image { height: 100%; }
+  .hero__scrim { background: linear-gradient(90deg, rgba(8,11,9,.9), rgba(8,11,9,.58) 52%, rgba(8,11,9,.17)), linear-gradient(0deg, rgba(8,11,9,.7), transparent 60%); }
+  .hero__content { padding-top: clamp(150px, 35vh, 205px); padding-top: clamp(150px, 35svh, 205px); padding-bottom: 38px; }
+  .hero h1 { max-width: 13ch; font-size: clamp(2.6rem, 7.5vw, 4rem); }
+  .hero__lede { max-width: 560px; margin-block: 16px 18px; font-size: .96rem; }
+  .hero__actions { align-items: center; flex-direction: row; gap: 18px; }
+  .hero__actions .button { width: auto; }
+  .editorial-split__image { min-height: 360px; height: 58vw; }
+  .mobile-menu { padding-top: 18px; }
+}
+@media (forced-colors: active) {
+  :focus-visible { outline: 3px solid Highlight; outline-offset: 3px; }
+  .button, .menu-button, .volume-menu a, .mobile-cta a, .drive-card__enquiry { border: 1px solid ButtonText; }
+  .material-feature::after { background: linear-gradient(0deg, CanvasText, transparent 85%); }
+  .material-feature__copy, .material-feature__copy small { color: Canvas; }
 }
 </style></head><body data-page="estimator"><a class="skip-link" href="#main">Skip to content</a>
   <div class="announcement"><div class="shell announcement__inner"><span>Nation-wide delivery available</span><span class="announcement__dot" aria-hidden="true"></span><span>Wholesale &amp; project supply</span><span class="announcement__dot" aria-hidden="true"></span><span>Rohtak, Haryana</span></div></div>

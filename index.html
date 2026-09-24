@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Explore wall panels, UV sheets, louvers, ACP and decorative surfaces at Tayal Associates & Traders. Browse catalogues and enquire from anywhere in India."><meta name="theme-color" content="#141714"><title>Tayal Associates & Traders | Surface Materials in Rohtak</title><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141714'/%3E%3Cpath d='M14 16h36v8H36v26h-8V24H14z' fill='%23caa46c'/%3E%3C/svg%3E"><style>:root {
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="description" content="Explore wall panels, UV sheets, louvers, ACP and decorative surfaces at Tayal Associates & Traders. Browse catalogues and enquire from anywhere in India."><meta name="theme-color" content="#141714"><title>Tayal Associates & Traders | Surface Materials in Rohtak</title><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141714'/%3E%3Cpath d='M14 16h36v8H36v26h-8V24H14z' fill='%23caa46c'/%3E%3C/svg%3E"><style>:root {
   --ink: #151612;
   --ink-soft: #25261f;
   --paper: #f4f1e9;
@@ -608,7 +608,11 @@ body { background: var(--paper); }
 .directory-grid a:hover i { transform: translate(4px, -4px); }
 .editorial-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 600px; background: #d8cebc; }
 .editorial-split__image { min-height: 600px; overflow: hidden; }
+.editorial-split__image { position: relative; isolation: isolate; }
 .editorial-split__image img { width: 100%; height: 100%; object-fit: cover; }
+.image-credit { position: absolute; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); display: inline-flex; min-height: 44px; align-items: center; gap: 10px; padding: 8px 14px; background: rgba(18,22,18,.82); color: #fff; font: 600 .7rem/1.2 var(--sans); letter-spacing: .04em; backdrop-filter: blur(10px); }
+.image-credit:hover { background: #1f2a21; }
+.image-credit:focus-visible { outline-color: #fff; }
 .editorial-split__copy { align-self: center; max-width: 680px; padding: clamp(40px, 7vw, 110px); }
 .editorial-split__copy h2, .closing-cta h2, .office-invite h2 { margin: 0; font: 500 clamp(2.8rem, 4.6vw, 5.4rem)/1.03 var(--serif); letter-spacing: -.045em; }
 .editorial-split__copy h2 em, .office-invite h2 em { color: #74552d; }
@@ -697,7 +701,7 @@ body[data-page="contact"] .mobile-cta, body:not([data-page="home"]) .mobile-cta 
   .directory-grid strong { font-size: 2.35rem; }
   .directory-grid i { right: 26px; top: 24px; }
   .editorial-split { display: flex; flex-direction: column; }
-  .editorial-split__image { min-height: 330px; height: 55vw; }
+  .editorial-split__image { min-height: 0; height: auto; aspect-ratio: 4 / 3; }
   .editorial-split__copy { padding: 56px 22px 64px; }
   .closing-cta h2 { font-size: clamp(2.8rem, 11vw, 4.2rem); }
   .volume-menu { display: flex; margin: 0 -16px 48px 0; padding: 2px 16px 14px 0; }
@@ -803,6 +807,43 @@ body[data-page="contact"] .mobile-cta, body:not([data-page="home"]) .mobile-cta 
 @media (prefers-reduced-motion: reduce) {
   .material-feature img, .material-feature__copy i, .material-index a, .drive-card__enquiry, .size-preset { transition: none; }
 }
+
+/* Device safe areas, short landscape screens, and system high-contrast modes */
+@media (max-width: 680px) {
+  .brand { min-height: 44px; }
+  .menu-button { width: 44px; min-width: 44px; height: 44px; }
+  .mobile-cta a { min-height: 44px; }
+  .text-link { min-height: 44px; align-items: center; }
+  .size-preset { min-height: 44px; }
+  .unit-picker { min-height: 44px; }
+  .field-grid input[type="number"], .field-grid select { min-height: 44px; }
+  .wastage-control input[type="range"], input[type="range"] { min-height: 44px; }
+  .mobile-cta {
+    inset-inline-start: max(8px, env(safe-area-inset-left));
+    inset-inline-end: max(8px, env(safe-area-inset-right));
+    inset-block-end: max(8px, env(safe-area-inset-bottom));
+  }
+  body { padding-block-end: calc(64px + env(safe-area-inset-bottom)); }
+  .footer__links a { display: inline-flex; min-height: 44px; align-items: center; }
+}
+@media (max-width: 900px) and (orientation: landscape) and (max-height: 520px) {
+  .hero { min-height: max(520px, 100vh); min-height: max(520px, 100svh); }
+  .hero__image { height: 100%; }
+  .hero__scrim { background: linear-gradient(90deg, rgba(8,11,9,.9), rgba(8,11,9,.58) 52%, rgba(8,11,9,.17)), linear-gradient(0deg, rgba(8,11,9,.7), transparent 60%); }
+  .hero__content { padding-top: clamp(150px, 35vh, 205px); padding-top: clamp(150px, 35svh, 205px); padding-bottom: 38px; }
+  .hero h1 { max-width: 13ch; font-size: clamp(2.6rem, 7.5vw, 4rem); }
+  .hero__lede { max-width: 560px; margin-block: 16px 18px; font-size: .96rem; }
+  .hero__actions { align-items: center; flex-direction: row; gap: 18px; }
+  .hero__actions .button { width: auto; }
+  .editorial-split__image { min-height: 360px; height: 58vw; }
+  .mobile-menu { padding-top: 18px; }
+}
+@media (forced-colors: active) {
+  :focus-visible { outline: 3px solid Highlight; outline-offset: 3px; }
+  .button, .menu-button, .volume-menu a, .mobile-cta a, .drive-card__enquiry { border: 1px solid ButtonText; }
+  .material-feature::after { background: linear-gradient(0deg, CanvasText, transparent 85%); }
+  .material-feature__copy, .material-feature__copy small { color: Canvas; }
+}
 </style></head><body data-page="home"><a class="skip-link" href="#main">Skip to content</a>
   <div class="announcement"><div class="shell announcement__inner"><span>Nation-wide delivery available</span><span class="announcement__dot" aria-hidden="true"></span><span>Wholesale &amp; project supply</span><span class="announcement__dot" aria-hidden="true"></span><span>Rohtak, Haryana</span></div></div>
   <header class="site-header" id="top"><div class="shell nav-wrap"><a class="brand" href="index.html" aria-label="Tayal Associates and Traders home"><span class="brand__mark" aria-hidden="true">T</span><span class="brand__name">Tayal <strong>Associates</strong></span></a>
@@ -845,7 +886,7 @@ body[data-page="contact"] .mobile-cta, body:not([data-page="home"]) .mobile-cta 
     <a class="material-feature" href="catalogues.html#wpc-louvers"><img src="tayal2-product.jpg" alt="Wood-finish fluted panel sample" loading="lazy"><span class="material-feature__copy"><small>03 / Architectural detail</small><strong>WPC &amp; louvers</strong><span>Explore fluted finishes <i aria-hidden="true">↗</i></span></span></a>
   </div>
   <div class="material-index" aria-label="More material categories"><p>Continue exploring</p><a href="catalogues.html#acp-exterior">ACP &amp; exterior <span aria-hidden="true">↗</span></a><a href="catalogues.html#laminates-acrylics">Laminates &amp; acrylics <span aria-hidden="true">↗</span></a><a href="catalogues.html#treelam-volumes">Treelam &amp; HDPC <span aria-hidden="true">↗</span></a><a href="catalogues.html#designer-panels">Designer panels <span aria-hidden="true">↗</span></a><a href="catalogues.html#decor-plast">Decor Plast <span aria-hidden="true">↗</span></a><a href="catalogues.html">All catalogues <span aria-hidden="true">↗</span></a></div>
-  </div></section><section class="editorial-split"><div class="editorial-split__image"><img src="tayal7-product.jpg" alt="Warm wood-finish panel sample" loading="lazy"></div><div class="editorial-split__copy"><p class="kicker">A simple way to begin</p><h2>From an idea to the <em>right material.</em></h2><ol class="journey-steps"><li><span>01</span><div><strong>Discover</strong><p>Start with a material family or finish that fits your space.</p></div></li><li><span>02</span><div><strong>Explore</strong><p>Open the real PDF volumes and note the designs you like.</p></div></li><li><span>03</span><div><strong>Plan</strong><p>Estimate quantity, then confirm your selection with our team.</p></div></li></ol><a class="text-link" href="estimator.html">Plan your quantity <span aria-hidden="true">↗</span></a></div></section>      <section class="project-supply" aria-labelledby="project-title">
+  </div></section><section class="editorial-split"><div class="editorial-split__image"><img src="tayal-justdial-showroom.jpg" alt="Tayal Associates storefront with wall and exterior cladding in Rohtak" loading="lazy"><a class="image-credit" href="https://www.justdial.com/Rohtak/Tayal-Associates-Traders-New-Rajendra-Colony/9999P1262-1262-230129044600-A4F6_BZDET/gallery?tab=all&amp;template=1" target="_blank" rel="noreferrer">Photo via Justdial <span aria-hidden="true">↗</span></a></div><div class="editorial-split__copy"><p class="kicker">A simple way to begin</p><h2>From an idea to the <em>right material.</em></h2><ol class="journey-steps"><li><span>01</span><div><strong>Discover</strong><p>Start with a material family or finish that fits your space.</p></div></li><li><span>02</span><div><strong>Explore</strong><p>Open the real PDF volumes and note the designs you like.</p></div></li><li><span>03</span><div><strong>Plan</strong><p>Estimate quantity, then confirm your selection with our team.</p></div></li></ol><a class="text-link" href="estimator.html">Plan your quantity <span aria-hidden="true">↗</span></a></div></section>      <section class="project-supply" aria-labelledby="project-title">
         <div class="shell project-supply__grid reveal">
           <div class="project-supply__number">60K<span>+</span></div>
           <div class="project-supply__copy">
