@@ -112,17 +112,15 @@
     if (!target) return;
     const fragment = document.createDocumentFragment();
     items.forEach((item, index) => {
-      const card = document.createElement("a");
+      const card = document.createElement("article");
       card.className = `drive-card${item.image ? "" : " drive-card--plain"}`;
-      card.href = `https://drive.google.com/file/d/${item.fileId}/view`;
-      card.target = "_blank";
-      card.rel = "noreferrer";
-      card.setAttribute("aria-label", `Open ${item.title} in Google Drive`);
+      const pdfUrl = `https://drive.google.com/file/d/${item.fileId}/view`;
+      const enquiry = `https://wa.me/919034458096?text=${encodeURIComponent(`Hello Tayal Associates & Traders, I am interested in ${item.title}. Please share its availability and details.`)}`;
       const number = String(index + 1).padStart(2, "0");
       const visual = item.image
         ? `<img src="${item.image}" alt="${item.title} cover" loading="lazy" decoding="async"><span class="drive-card__volume">${number}</span>`
         : `<div class="drive-card__placeholder"><span>PDF</span><strong>${item.cover || item.title}</strong></div><span class="drive-card__volume">${number}</span>`;
-      card.innerHTML = `<div class="drive-card__visual">${visual}</div><div class="drive-card__body"><strong>${item.title}</strong><small>${item.meta}</small><span>Open on Drive <i aria-hidden="true">↗</i></span></div>`;
+      card.innerHTML = `<a class="drive-card__primary" href="${pdfUrl}" target="_blank" rel="noreferrer" aria-label="Open ${item.title} PDF in Google Drive"><div class="drive-card__visual">${visual}</div><div class="drive-card__body"><strong>${item.title}</strong><small>${item.meta}</small><span>View PDF <i aria-hidden="true">↗</i></span></div></a><a class="drive-card__enquiry" href="${enquiry}" target="_blank" rel="noreferrer" aria-label="Enquire about ${item.title} on WhatsApp">Enquire about this volume <span aria-hidden="true">↗</span></a>`;
       const cover = card.querySelector("img");
       cover?.addEventListener("error", () => {
         const visualBox = card.querySelector(".drive-card__visual");
@@ -131,6 +129,14 @@
       fragment.append(card);
     });
     target.append(fragment);
+    const series = target.closest(".catalogue-series");
+    const headline = series?.querySelector(".series-head > div:last-child");
+    if (headline && !headline.querySelector(".series-volume-count")) {
+      const count = document.createElement("p");
+      count.className = "series-volume-count";
+      count.innerHTML = `${items.length} PDF ${items.length === 1 ? "volume" : "volumes"}<span class="series-volume-count__hint"> · Swipe to explore</span>`;
+      headline.append(count);
+    }
   };
 
   renderDriveCatalogues("#wall-panel-catalogues", driveCatalogues.wall);
@@ -144,6 +150,31 @@
   renderDriveCatalogues("#tayal-woto-catalogues", driveCatalogues.tayalWoto);
   renderDriveCatalogues("#office-catalogues", driveCatalogues.office);
   renderDriveCatalogues("#price-other-catalogues", driveCatalogues.priceOther);
+  const catalogueCount = document.querySelector("#catalogue-count");
+  if (catalogueCount) catalogueCount.textContent = String(Object.values(driveCatalogues).flat().length);
+
+  const volumeMenu = document.querySelector(".volume-menu");
+  const catalogueSections = [...document.querySelectorAll(".catalogue-series[id]")];
+  const updateActiveVolume = () => {
+    if (!volumeMenu) return;
+    const current = catalogueSections.filter((section) => section.getBoundingClientRect().top < 230).at(-1)?.id || catalogueSections[0]?.id;
+    volumeMenu.querySelectorAll("a[href^='#']").forEach((link) => {
+      const active = link.hash.slice(1) === current;
+      link.classList.toggle("is-active", active);
+      if (active) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    });
+  };
+  if (volumeMenu) {
+    let pending = false;
+    window.addEventListener("scroll", () => {
+      if (pending) return;
+      pending = true;
+      requestAnimationFrame(() => { updateActiveVolume(); pending = false; });
+    }, { passive: true });
+    window.addEventListener("hashchange", updateActiveVolume);
+    updateActiveVolume();
+  }
 
   const videoTarget = document.querySelector("#catalogue-video");
   if (videoTarget) {
@@ -152,15 +183,28 @@
 
   const menuButton = document.querySelector(".menu-button");
   const mobileMenu = document.querySelector("#mobile-menu");
-  const setMenu = (open) => {
+  const setMenu = (open, restoreFocus = false) => {
     if (!menuButton || !mobileMenu) return;
     menuButton.setAttribute("aria-expanded", String(open));
+    menuButton.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     mobileMenu.hidden = !open;
     document.body.classList.toggle("menu-open", open);
+    if (open) mobileMenu.querySelector("a")?.focus();
+    else if (restoreFocus) menuButton.focus();
   };
-  menuButton?.addEventListener("click", () => setMenu(menuButton.getAttribute("aria-expanded") !== "true"));
-  menuButton?.addEventListener("click", () => menuButton.setAttribute("aria-label", menuButton.getAttribute("aria-expanded") === "true" ? "Close menu" : "Open menu"));
-  mobileMenu?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setMenu(false)));
+  menuButton?.addEventListener("click", () => setMenu(menuButton.getAttribute("aria-expanded") !== "true", true));
+  mobileMenu?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setMenu(false, !link.href || link.href === location.href)));
+  mobileMenu?.addEventListener("keydown", (event) => {
+    if (event.key !== "Tab") return;
+    const links = [...mobileMenu.querySelectorAll("a")];
+    if (event.shiftKey && document.activeElement === links[0]) { event.preventDefault(); links.at(-1)?.focus(); }
+    else if (!event.shiftKey && document.activeElement === links.at(-1)) { event.preventDefault(); links[0]?.focus(); }
+  });
+
+  const siteHeader = document.querySelector(".site-header");
+  const updateHeader = () => siteHeader?.classList.toggle("is-scrolled", window.scrollY > 64);
+  window.addEventListener("scroll", updateHeader, { passive: true });
+  updateHeader();
 
   const desktopMenuQuery = window.matchMedia("(min-width: 1021px)");
   desktopMenuQuery.addEventListener?.("change", (event) => {
@@ -173,11 +217,13 @@
     if (!mobileCta) return;
     mobileCta.classList.toggle("is-visible", visible);
     mobileCta.setAttribute("aria-hidden", String(!visible));
+    mobileCta.inert = !visible;
   };
+  if (hero) setMobileCta(false);
   if (hero && "IntersectionObserver" in window) {
     const heroObserver = new IntersectionObserver(([entry]) => setMobileCta(!entry.isIntersecting), { threshold: 0.08 });
     heroObserver.observe(hero);
-  }
+  } else setMobileCta(true);
 
   const quantityForm = document.querySelector("#quantity-form");
   quantityForm?.querySelectorAll('input[type="number"]').forEach((input) => {
@@ -197,6 +243,13 @@
   document.querySelector("#surface-unit")?.addEventListener("change", updateUnitLabels);
   document.querySelector("#product-unit")?.addEventListener("change", updateUnitLabels);
   updateUnitLabels();
+  document.querySelector("#uv-size-preset")?.addEventListener("click", () => {
+    document.querySelector("#product-unit").value = "ft";
+    document.querySelector("#product-width").value = "4";
+    document.querySelector("#product-height").value = "8";
+    updateUnitLabels();
+    document.querySelector("#product-width").focus();
+  });
   wastageInput?.addEventListener("input", () => {
     wastageOutput.value = `${wastageInput.value}%`;
     wastageOutput.textContent = `${wastageInput.value}%`;
@@ -213,10 +266,12 @@
     if (![surfaceWidth, surfaceHeight, productWidth, productHeight].every((value) => Number.isFinite(value) && value > 0)) return;
     const surfaceAreaM2 = surfaceWidth * unitToMeters[surfaceUnit] * surfaceHeight * unitToMeters[surfaceUnit];
     const productAreaM2 = productWidth * unitToMeters[productUnit] * productHeight * unitToMeters[productUnit];
-    const pieces = Math.ceil(Math.ceil(surfaceAreaM2 / productAreaM2) * (1 + wastage / 100));
+    const pieces = Math.ceil((surfaceAreaM2 / productAreaM2) * (1 + wastage / 100));
     const surfaceAreaSqFt = surfaceAreaM2 / (unitToMeters.ft * unitToMeters.ft);
     document.querySelector("#pieces-result").textContent = String(pieces);
     document.querySelector("#area-result").textContent = `${surfaceAreaM2.toFixed(2)} m² (${surfaceAreaSqFt.toFixed(1)} sq ft) · ${wastage}% allowance included`;
+    const estimateEnquiry = document.querySelector("#estimate-enquiry");
+    if (estimateEnquiry) estimateEnquiry.href = `https://wa.me/919034458096?text=${encodeURIComponent(`Hello Tayal Associates & Traders, my surface is ${surfaceWidth} × ${surfaceHeight} ${unitLabels[surfaceUnit]} and the product size is ${productWidth} × ${productHeight} ${unitLabels[productUnit]}. Your website estimates ${pieces} pieces including ${wastage}% allowance. Please help me confirm the final quantity and availability.`)}`;
     const result = document.querySelector("#calculator-result");
     result.hidden = false;
     result.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "nearest" });
@@ -245,6 +300,6 @@
     revealItems.forEach((item) => observer.observe(item));
   }
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") setMenu(false);
+    if (event.key === "Escape" && menuButton?.getAttribute("aria-expanded") === "true") setMenu(false, true);
   });
 })();

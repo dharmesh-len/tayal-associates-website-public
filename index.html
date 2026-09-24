@@ -716,6 +716,93 @@ body[data-page="contact"] .mobile-cta, body:not([data-page="home"]) .mobile-cta 
   html { scroll-behavior: auto; }
   .button, .drive-card, .directory-grid a, .contact-options__grid a { transition: none; }
 }
+
+/* Material gallery and improved catalogue journey */
+.site-header.is-scrolled { position: fixed; inset: 0 0 auto; background: rgba(19,25,20,.96); border-color: rgba(255,255,255,.13); box-shadow: 0 14px 32px rgba(0,0,0,.12); backdrop-filter: blur(16px); }
+.site-header.is-scrolled .nav-wrap { height: 72px; }
+.site-header.is-scrolled .mobile-menu { inset-block-start: 72px; }
+.site-header.is-scrolled .desktop-nav a { padding-block: 29px; }
+.site-header.is-scrolled .desktop-nav a::after { bottom: 20px; }
+.page-directory .section-head { margin-bottom: 42px; }
+.material-showcase { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
+.material-feature { position: relative; isolation: isolate; min-width: 0; min-height: clamp(430px,40vw,600px); display: flex; align-items: end; overflow: hidden; color: #fff; background: #283027; }
+.material-feature::after { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(0deg, rgba(12,17,13,.91), rgba(12,17,13,.1) 70%), linear-gradient(90deg,rgba(12,17,13,.26),transparent); }
+.material-feature img { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .65s cubic-bezier(.2,.7,.2,1); }
+.material-feature:nth-child(1) img { object-position: 51% center; }
+.material-feature:nth-child(2) img { object-position: 50% 45%; }
+.material-feature:nth-child(3) img { object-position: 52% center; }
+.material-feature:hover img, .material-feature:focus-visible img { transform: scale(1.045); }
+.material-feature__copy { display: flex; width: 100%; flex-direction: column; align-items: start; padding: clamp(24px,3vw,42px); }
+.material-feature__copy small { color: #e6c99e; font: 700 .69rem/1 var(--sans); letter-spacing: .13em; text-transform: uppercase; }
+.material-feature__copy strong { margin-top: 18px; max-width: 12ch; font: 500 clamp(2.2rem,3.4vw,4rem)/1 var(--serif); letter-spacing: -.035em; }
+.material-feature__copy > span { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 20px; margin-top: 29px; padding-top: 17px; border-top: 1px solid rgba(255,255,255,.4); font: 700 .68rem/1.3 var(--sans); letter-spacing: .07em; text-transform: uppercase; }
+.material-feature__copy i { font: normal 1.25rem/1 var(--sans); transition: transform .25s; }
+.material-feature:hover i { transform: translate(4px,-4px); }
+.material-index { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); border-top: 1px solid var(--line); margin-top: 36px; }
+.material-index p { grid-column: 1/-1; margin: 0; padding: 23px 0 14px; color: var(--bronze-dark); font: 700 .69rem/1 var(--sans); letter-spacing: .11em; text-transform: uppercase; }
+.material-index a { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 82px; padding: 16px 22px 16px 0; border-bottom: 1px solid var(--line); font: 500 clamp(1.25rem,1.65vw,1.8rem)/1.15 var(--serif); transition: color .2s, padding-left .2s; }
+.material-index a:not(:nth-child(3n + 2)) { padding-left: 22px; }
+.material-index a:hover, .material-index a:focus-visible { color: var(--bronze-dark); padding-left: 12px; }
+.material-index a span { flex: 0 0 auto; color: var(--bronze-dark); font: 1.1rem/1 var(--sans); }
+.journey-steps { max-width: 480px; margin: 31px 0 28px; padding: 0; list-style: none; border-top: 1px solid rgba(21,22,18,.2); }
+.journey-steps li { display: grid; grid-template-columns: 42px 1fr; gap: 16px; padding: 17px 0; border-bottom: 1px solid rgba(21,22,18,.2); }
+.journey-steps li > span { margin-top: 5px; color: var(--bronze-dark); font: 700 .67rem/1 var(--sans); }
+.journey-steps strong { font: 500 1.38rem/1.15 var(--serif); }
+.journey-steps p { margin: 5px 0 0; color: #5e6058; font-size: .88rem; line-height: 1.6; }
+.volume-menu__label { display: flex; align-items: center; justify-content: space-between; margin: 43px 0 9px; color: var(--bronze-dark); font: 700 .67rem/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; }
+.volume-menu { top: 76px; margin-top: 0; }
+.volume-menu a.is-active, .volume-menu a[aria-current="location"] { background: #28352b; color: #fff; }
+.volume-menu a.is-active span { color: #e4bb81; }
+.catalogue-series[id] { scroll-margin-top: 230px; }
+.series-head > div:last-child > p.series-volume-count { display: inline-flex; align-items: center; margin-top: 20px; padding: 8px 12px; border: 1px solid rgba(136,97,55,.32); border-radius: 2px; color: #80603b; font: 700 .66rem/1.2 var(--sans); letter-spacing: .08em; text-transform: uppercase; }
+.series-volume-count__hint { display: none; }
+.drive-card { color: var(--ink); }
+.drive-card__primary { display: flex; min-width: 0; flex: 1; flex-direction: column; color: var(--ink); }
+.drive-card__primary:focus-visible, .drive-card__enquiry:focus-visible { outline-offset: -3px; }
+.drive-card__body { flex: 1; gap: 10px; }
+.drive-card__body strong { color: var(--ink); }
+.drive-card__body span { margin-top: auto; }
+.drive-card__enquiry { display: flex; min-height: 48px; align-items: center; justify-content: space-between; gap: 10px; padding: 10px 18px; border-top: 1px solid rgba(21,22,18,.14); background: #f1ece1; color: #524128; font: 700 .68rem/1.25 var(--sans); letter-spacing: .04em; text-transform: uppercase; transition: background .2s, color .2s; }
+.drive-card__enquiry:hover { background: #dfcfb4; color: #1d231e; }
+.drive-card__enquiry span { font-size: 1rem; }
+.page-masthead .library-count { margin-top: 22px !important; color: #d9d7ca !important; font: 700 .74rem/1.2 var(--sans) !important; letter-spacing: .08em; text-transform: uppercase; }
+.library-count strong { color: #e6bb81; font-size: 1rem; }
+.preset-label { margin: 2px 0 8px; color: #64655e; font: 600 .73rem/1 var(--sans); }
+.size-preset { min-height: 40px; margin: 0 0 16px; padding: 0 14px; border: 1px solid #c9b392; background: #f5eee2; color: #3c392f; font: 700 .72rem/1.1 var(--sans); cursor: pointer; transition: background .2s, transform .2s; }
+.size-preset:hover { background: #e6d4b8; transform: translateY(-1px); }
+.size-preset span { margin-left: 10px; }
+.estimate-enquiry { display: flex; min-height: 44px; align-items: center; justify-content: center; gap: 14px; margin-top: 18px; padding: 10px 14px; background: #26392b; color: #fff; font: 700 .65rem/1.3 var(--sans); letter-spacing: .07em; text-transform: uppercase; }
+.estimate-enquiry:hover { background: #36543d; }
+.contact-options__grid strong { overflow-wrap: anywhere; }
+
+@media (max-width: 1020px) {
+  .volume-menu { position: static; }
+  .catalogue-series[id] { scroll-margin-top: 92px; }
+}
+@media (max-width: 900px) {
+  .material-showcase { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .material-feature:last-child { grid-column: 1/-1; min-height: 370px; }
+  .material-index { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .material-index a { padding-left: 0 !important; }
+  .material-index a:nth-child(even) { padding-left: 18px !important; }
+}
+@media (max-width: 680px) {
+  .material-showcase { grid-template-columns: 1fr; gap: 10px; }
+  .material-feature, .material-feature:last-child { grid-column: auto; min-height: 370px; }
+  .material-feature__copy strong { font-size: clamp(2.45rem,10vw,3.4rem); }
+  .material-index { grid-template-columns: 1fr; margin-top: 27px; }
+  .material-index a, .material-index a:nth-child(even) { padding-left: 0 !important; }
+  .material-index a { min-height: 68px; }
+  .volume-menu__label { margin-top: 25px; }
+  .volume-menu { margin-top: 0; }
+  .series-head > div:last-child > p.series-volume-count { margin-top: 15px; }
+  .series-volume-count__hint { display: inline; }
+  .drive-card__enquiry { min-height: 52px; }
+  .journey-steps { margin-top: 25px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .material-feature img, .material-feature__copy i, .material-index a, .drive-card__enquiry, .size-preset { transition: none; }
+}
 </style></head><body data-page="home"><a class="skip-link" href="#main">Skip to content</a>
   <div class="announcement"><div class="shell announcement__inner"><span>Nation-wide delivery available</span><span class="announcement__dot" aria-hidden="true"></span><span>Wholesale &amp; project supply</span><span class="announcement__dot" aria-hidden="true"></span><span>Rohtak, Haryana</span></div></div>
   <header class="site-header" id="top"><div class="shell nav-wrap"><a class="brand" href="index.html" aria-label="Tayal Associates and Traders home"><span class="brand__mark" aria-hidden="true">T</span><span class="brand__name">Tayal <strong>Associates</strong></span></a>
@@ -751,14 +838,14 @@ body[data-page="contact"] .mobile-cta, body:not([data-page="home"]) .mobile-cta 
         </div>
       </section>
 
-<section class="page-directory section"><div class="shell"><div class="section-head"><div><p class="kicker">Explore by material</p><h2>Find a finish for <em>your space.</em></h2></div><p>Choose a category to see its current PDF volumes. Every catalogue opens in Google Drive.</p></div><div class="directory-grid">
-  <a href="catalogues.html#wall-panels"><span>01 / Direct fit</span><strong>Wall panels</strong><small>Finished surfaces for direct wall installation</small><i aria-hidden="true">↗</i></a>
-  <a href="catalogues.html#uv-sheets"><span>02 / Full size</span><strong>UV sheets</strong><small>8 × 4 ft sheet collections</small><i aria-hidden="true">↗</i></a>
-  <a href="catalogues.html#wpc-louvers"><span>03 / Texture</span><strong>WPC &amp; louvers</strong><small>Fluted walls, ceilings and detail</small><i aria-hidden="true">↗</i></a>
-  <a href="catalogues.html#acp-exterior"><span>04 / Architecture</span><strong>ACP &amp; exterior</strong><small>Facade and outdoor finishes</small><i aria-hidden="true">↗</i></a>
-  <a href="catalogues.html#laminates-acrylics"><span>05 / Detail</span><strong>Laminates &amp; acrylics</strong><small>Decorative interior surfaces</small><i aria-hidden="true">↗</i></a>
-  <a href="catalogues.html#treelam-volumes"><span>06 / More</span><strong>All collections</strong><small>Treelam, designer panels and more</small><i aria-hidden="true">↗</i></a>
-  </div></div></section><section class="editorial-split"><div class="editorial-split__image"><img src="tayal5-product.jpg" alt="Decorative wall panel finish from the Tayal catalogue" loading="lazy"></div><div class="editorial-split__copy"><p class="kicker">Designed for real spaces</p><h2>From an idea to the <em>right material.</em></h2><p>Browse the real catalogue covers, compare collections and bring your shortlist to our Rohtak team. We can help with finishes, dimensions and project quantities.</p><a class="text-link" href="about.html">How we help <span aria-hidden="true">↗</span></a></div></section>      <section class="project-supply" aria-labelledby="project-title">
+<section class="page-directory section"><div class="shell"><div class="section-head"><div><p class="kicker">The material library</p><h2>Begin with the <em>finish.</em></h2></div><p>Look closely at real material samples, then open the complete catalogue for every design in the collection.</p></div>
+  <div class="material-showcase">
+    <a class="material-feature" href="catalogues.html#wall-panels"><img src="tayal5-product.jpg" alt="Textured wall panel sample" loading="lazy"><span class="material-feature__copy"><small>01 / Wall-ready</small><strong>Wall panels</strong><span>Explore direct-fit surfaces <i aria-hidden="true">↗</i></span></span></a>
+    <a class="material-feature" href="catalogues.html#uv-sheets"><img src="uv2-product.jpg" alt="Decorative UV sheet displayed in a showroom" loading="lazy"><span class="material-feature__copy"><small>02 / Full-size sheets</small><strong>UV sheets</strong><span>Explore 8 × 4 ft sheets <i aria-hidden="true">↗</i></span></span></a>
+    <a class="material-feature" href="catalogues.html#wpc-louvers"><img src="tayal2-product.jpg" alt="Wood-finish fluted panel sample" loading="lazy"><span class="material-feature__copy"><small>03 / Architectural detail</small><strong>WPC &amp; louvers</strong><span>Explore fluted finishes <i aria-hidden="true">↗</i></span></span></a>
+  </div>
+  <div class="material-index" aria-label="More material categories"><p>Continue exploring</p><a href="catalogues.html#acp-exterior">ACP &amp; exterior <span aria-hidden="true">↗</span></a><a href="catalogues.html#laminates-acrylics">Laminates &amp; acrylics <span aria-hidden="true">↗</span></a><a href="catalogues.html#treelam-volumes">Treelam &amp; HDPC <span aria-hidden="true">↗</span></a><a href="catalogues.html#designer-panels">Designer panels <span aria-hidden="true">↗</span></a><a href="catalogues.html#decor-plast">Decor Plast <span aria-hidden="true">↗</span></a><a href="catalogues.html">All catalogues <span aria-hidden="true">↗</span></a></div>
+  </div></section><section class="editorial-split"><div class="editorial-split__image"><img src="tayal7-product.jpg" alt="Warm wood-finish panel sample" loading="lazy"></div><div class="editorial-split__copy"><p class="kicker">A simple way to begin</p><h2>From an idea to the <em>right material.</em></h2><ol class="journey-steps"><li><span>01</span><div><strong>Discover</strong><p>Start with a material family or finish that fits your space.</p></div></li><li><span>02</span><div><strong>Explore</strong><p>Open the real PDF volumes and note the designs you like.</p></div></li><li><span>03</span><div><strong>Plan</strong><p>Estimate quantity, then confirm your selection with our team.</p></div></li></ol><a class="text-link" href="estimator.html">Plan your quantity <span aria-hidden="true">↗</span></a></div></section>      <section class="project-supply" aria-labelledby="project-title">
         <div class="shell project-supply__grid reveal">
           <div class="project-supply__number">60K<span>+</span></div>
           <div class="project-supply__copy">
@@ -893,17 +980,15 @@ body[data-page="contact"] .mobile-cta, body:not([data-page="home"]) .mobile-cta 
     if (!target) return;
     const fragment = document.createDocumentFragment();
     items.forEach((item, index) => {
-      const card = document.createElement("a");
+      const card = document.createElement("article");
       card.className = `drive-card${item.image ? "" : " drive-card--plain"}`;
-      card.href = `https://drive.google.com/file/d/${item.fileId}/view`;
-      card.target = "_blank";
-      card.rel = "noreferrer";
-      card.setAttribute("aria-label", `Open ${item.title} in Google Drive`);
+      const pdfUrl = `https://drive.google.com/file/d/${item.fileId}/view`;
+      const enquiry = `https://wa.me/919034458096?text=${encodeURIComponent(`Hello Tayal Associates & Traders, I am interested in ${item.title}. Please share its availability and details.`)}`;
       const number = String(index + 1).padStart(2, "0");
       const visual = item.image
         ? `<img src="${item.image}" alt="${item.title} cover" loading="lazy" decoding="async"><span class="drive-card__volume">${number}</span>`
         : `<div class="drive-card__placeholder"><span>PDF</span><strong>${item.cover || item.title}</strong></div><span class="drive-card__volume">${number}</span>`;
-      card.innerHTML = `<div class="drive-card__visual">${visual}</div><div class="drive-card__body"><strong>${item.title}</strong><small>${item.meta}</small><span>Open on Drive <i aria-hidden="true">↗</i></span></div>`;
+      card.innerHTML = `<a class="drive-card__primary" href="${pdfUrl}" target="_blank" rel="noreferrer" aria-label="Open ${item.title} PDF in Google Drive"><div class="drive-card__visual">${visual}</div><div class="drive-card__body"><strong>${item.title}</strong><small>${item.meta}</small><span>View PDF <i aria-hidden="true">↗</i></span></div></a><a class="drive-card__enquiry" href="${enquiry}" target="_blank" rel="noreferrer" aria-label="Enquire about ${item.title} on WhatsApp">Enquire about this volume <span aria-hidden="true">↗</span></a>`;
       const cover = card.querySelector("img");
       cover?.addEventListener("error", () => {
         const visualBox = card.querySelector(".drive-card__visual");
@@ -912,6 +997,14 @@ body[data-page="contact"] .mobile-cta, body:not([data-page="home"]) .mobile-cta 
       fragment.append(card);
     });
     target.append(fragment);
+    const series = target.closest(".catalogue-series");
+    const headline = series?.querySelector(".series-head > div:last-child");
+    if (headline && !headline.querySelector(".series-volume-count")) {
+      const count = document.createElement("p");
+      count.className = "series-volume-count";
+      count.innerHTML = `${items.length} PDF ${items.length === 1 ? "volume" : "volumes"}<span class="series-volume-count__hint"> · Swipe to explore</span>`;
+      headline.append(count);
+    }
   };
 
   renderDriveCatalogues("#wall-panel-catalogues", driveCatalogues.wall);
@@ -925,6 +1018,31 @@ body[data-page="contact"] .mobile-cta, body:not([data-page="home"]) .mobile-cta 
   renderDriveCatalogues("#tayal-woto-catalogues", driveCatalogues.tayalWoto);
   renderDriveCatalogues("#office-catalogues", driveCatalogues.office);
   renderDriveCatalogues("#price-other-catalogues", driveCatalogues.priceOther);
+  const catalogueCount = document.querySelector("#catalogue-count");
+  if (catalogueCount) catalogueCount.textContent = String(Object.values(driveCatalogues).flat().length);
+
+  const volumeMenu = document.querySelector(".volume-menu");
+  const catalogueSections = [...document.querySelectorAll(".catalogue-series[id]")];
+  const updateActiveVolume = () => {
+    if (!volumeMenu) return;
+    const current = catalogueSections.filter((section) => section.getBoundingClientRect().top < 230).at(-1)?.id || catalogueSections[0]?.id;
+    volumeMenu.querySelectorAll("a[href^='#']").forEach((link) => {
+      const active = link.hash.slice(1) === current;
+      link.classList.toggle("is-active", active);
+      if (active) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    });
+  };
+  if (volumeMenu) {
+    let pending = false;
+    window.addEventListener("scroll", () => {
+      if (pending) return;
+      pending = true;
+      requestAnimationFrame(() => { updateActiveVolume(); pending = false; });
+    }, { passive: true });
+    window.addEventListener("hashchange", updateActiveVolume);
+    updateActiveVolume();
+  }
 
   const videoTarget = document.querySelector("#catalogue-video");
   if (videoTarget) {
@@ -933,15 +1051,28 @@ body[data-page="contact"] .mobile-cta, body:not([data-page="home"]) .mobile-cta 
 
   const menuButton = document.querySelector(".menu-button");
   const mobileMenu = document.querySelector("#mobile-menu");
-  const setMenu = (open) => {
+  const setMenu = (open, restoreFocus = false) => {
     if (!menuButton || !mobileMenu) return;
     menuButton.setAttribute("aria-expanded", String(open));
+    menuButton.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     mobileMenu.hidden = !open;
     document.body.classList.toggle("menu-open", open);
+    if (open) mobileMenu.querySelector("a")?.focus();
+    else if (restoreFocus) menuButton.focus();
   };
-  menuButton?.addEventListener("click", () => setMenu(menuButton.getAttribute("aria-expanded") !== "true"));
-  menuButton?.addEventListener("click", () => menuButton.setAttribute("aria-label", menuButton.getAttribute("aria-expanded") === "true" ? "Close menu" : "Open menu"));
-  mobileMenu?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setMenu(false)));
+  menuButton?.addEventListener("click", () => setMenu(menuButton.getAttribute("aria-expanded") !== "true", true));
+  mobileMenu?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setMenu(false, !link.href || link.href === location.href)));
+  mobileMenu?.addEventListener("keydown", (event) => {
+    if (event.key !== "Tab") return;
+    const links = [...mobileMenu.querySelectorAll("a")];
+    if (event.shiftKey && document.activeElement === links[0]) { event.preventDefault(); links.at(-1)?.focus(); }
+    else if (!event.shiftKey && document.activeElement === links.at(-1)) { event.preventDefault(); links[0]?.focus(); }
+  });
+
+  const siteHeader = document.querySelector(".site-header");
+  const updateHeader = () => siteHeader?.classList.toggle("is-scrolled", window.scrollY > 64);
+  window.addEventListener("scroll", updateHeader, { passive: true });
+  updateHeader();
 
   const desktopMenuQuery = window.matchMedia("(min-width: 1021px)");
   desktopMenuQuery.addEventListener?.("change", (event) => {
@@ -954,11 +1085,13 @@ body[data-page="contact"] .mobile-cta, body:not([data-page="home"]) .mobile-cta 
     if (!mobileCta) return;
     mobileCta.classList.toggle("is-visible", visible);
     mobileCta.setAttribute("aria-hidden", String(!visible));
+    mobileCta.inert = !visible;
   };
+  if (hero) setMobileCta(false);
   if (hero && "IntersectionObserver" in window) {
     const heroObserver = new IntersectionObserver(([entry]) => setMobileCta(!entry.isIntersecting), { threshold: 0.08 });
     heroObserver.observe(hero);
-  }
+  } else setMobileCta(true);
 
   const quantityForm = document.querySelector("#quantity-form");
   quantityForm?.querySelectorAll('input[type="number"]').forEach((input) => {
@@ -978,6 +1111,13 @@ body[data-page="contact"] .mobile-cta, body:not([data-page="home"]) .mobile-cta 
   document.querySelector("#surface-unit")?.addEventListener("change", updateUnitLabels);
   document.querySelector("#product-unit")?.addEventListener("change", updateUnitLabels);
   updateUnitLabels();
+  document.querySelector("#uv-size-preset")?.addEventListener("click", () => {
+    document.querySelector("#product-unit").value = "ft";
+    document.querySelector("#product-width").value = "4";
+    document.querySelector("#product-height").value = "8";
+    updateUnitLabels();
+    document.querySelector("#product-width").focus();
+  });
   wastageInput?.addEventListener("input", () => {
     wastageOutput.value = `${wastageInput.value}%`;
     wastageOutput.textContent = `${wastageInput.value}%`;
@@ -994,10 +1134,12 @@ body[data-page="contact"] .mobile-cta, body:not([data-page="home"]) .mobile-cta 
     if (![surfaceWidth, surfaceHeight, productWidth, productHeight].every((value) => Number.isFinite(value) && value > 0)) return;
     const surfaceAreaM2 = surfaceWidth * unitToMeters[surfaceUnit] * surfaceHeight * unitToMeters[surfaceUnit];
     const productAreaM2 = productWidth * unitToMeters[productUnit] * productHeight * unitToMeters[productUnit];
-    const pieces = Math.ceil(Math.ceil(surfaceAreaM2 / productAreaM2) * (1 + wastage / 100));
+    const pieces = Math.ceil((surfaceAreaM2 / productAreaM2) * (1 + wastage / 100));
     const surfaceAreaSqFt = surfaceAreaM2 / (unitToMeters.ft * unitToMeters.ft);
     document.querySelector("#pieces-result").textContent = String(pieces);
     document.querySelector("#area-result").textContent = `${surfaceAreaM2.toFixed(2)} m² (${surfaceAreaSqFt.toFixed(1)} sq ft) · ${wastage}% allowance included`;
+    const estimateEnquiry = document.querySelector("#estimate-enquiry");
+    if (estimateEnquiry) estimateEnquiry.href = `https://wa.me/919034458096?text=${encodeURIComponent(`Hello Tayal Associates & Traders, my surface is ${surfaceWidth} × ${surfaceHeight} ${unitLabels[surfaceUnit]} and the product size is ${productWidth} × ${productHeight} ${unitLabels[productUnit]}. Your website estimates ${pieces} pieces including ${wastage}% allowance. Please help me confirm the final quantity and availability.`)}`;
     const result = document.querySelector("#calculator-result");
     result.hidden = false;
     result.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "nearest" });
@@ -1026,7 +1168,7 @@ body[data-page="contact"] .mobile-cta, body:not([data-page="home"]) .mobile-cta 
     revealItems.forEach((item) => observer.observe(item));
   }
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") setMenu(false);
+    if (event.key === "Escape" && menuButton?.getAttribute("aria-expanded") === "true") setMenu(false, true);
   });
 })();
 </script></body></html>
