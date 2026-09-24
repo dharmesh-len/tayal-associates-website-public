@@ -1,21 +1,4 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Explore premium interior and exterior surface materials at Tayal Associates and Traders in Rohtak. Browse products, estimate material quantity and enquire by WhatsApp or email."
-    />
-    <meta name="theme-color" content="#121311" />
-    <title>Tayal Associates &amp; Traders | Interior &amp; Exterior Materials, Rohtak</title>
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23121311'/%3E%3Cpath d='M14 16h36v8H36v26h-8V24H14z' fill='%23caa46c'/%3E%3C/svg%3E"
-    />
-    <style>
-:root {
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Explore wall panels, UV sheets, louvers, ACP and decorative surfaces at Tayal Associates & Traders. Browse catalogues and enquire from anywhere in India."><meta name="theme-color" content="#141714"><title>Tayal Associates & Traders | Surface Materials in Rohtak</title><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141714'/%3E%3Cpath d='M14 16h36v8H36v26h-8V24H14z' fill='%23caa46c'/%3E%3C/svg%3E"><style>:root {
   --ink: #151612;
   --ink-soft: #25261f;
   --paper: #f4f1e9;
@@ -583,68 +566,162 @@ body.motion-ready .reveal.is-visible { opacity: 1; transform: translateY(0); }
   .catalogue-video-card__body .text-link { justify-self: start; }
 }
 
-    </style>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+/* Multi-page editorial layer */
+:root { --paper: #f5f1e8; --paper-bright: #fffdf8; --bronze: #d1aa73; --bronze-dark: #886137; --shell: min(1440px, calc(100% - 64px)); }
+body { background: var(--paper); }
+::selection { background: #d8ba8c; color: #151612; }
+:focus-visible { outline: 3px solid #d1aa73; outline-offset: 3px; }
+.announcement { background: #20231e; }
+.site-header { border-color: rgba(255,255,255,.2); }
+.desktop-nav { gap: clamp(14px, 1.8vw, 28px); }
+.desktop-nav a { white-space: nowrap; }
+.desktop-nav a[aria-current="page"]::after { right: 0; }
+.desktop-nav a[aria-current="page"] { color: #efc897; }
+.brand__mark { background: rgba(255,255,255,.07); }
+.button { gap: 13px; border-radius: 2px; }
+.button span { font-size: 1rem; line-height: 0; }
+.button:active, .directory-grid a:active, .contact-options__grid a:active { transform: translateY(0) scale(.99); }
+.hero { min-height: min(850px, 92svh); }
+.hero__image { object-position: center 48%; }
+.hero__scrim { background: linear-gradient(90deg, rgba(8,11,9,.88), rgba(8,11,9,.48) 47%, rgba(8,11,9,.12) 78%), linear-gradient(0deg, rgba(8,11,9,.68), transparent 45%); }
+.hero h1 { font-size: clamp(3.7rem, 7vw, 7.2rem); }
+.proof__item { min-height: 118px; }
+.section { padding-block: clamp(80px, 9vw, 140px); }
+.page-masthead { position: relative; isolation: isolate; display: flex; align-items: end; min-height: clamp(420px, 55vw, 620px); padding: 190px 0 85px; background: #1d241e; color: #fff; overflow: hidden; }
+.page-masthead::before { content: ""; position: absolute; z-index: -1; inset: 0; background: radial-gradient(circle at 79% 33%, rgba(211,171,112,.23), transparent 29%), linear-gradient(130deg, transparent 40%, rgba(255,255,255,.035) 40.1%, transparent 40.3%), linear-gradient(150deg, #252d25, #101410 82%); }
+.page-masthead::after { content: ""; position: absolute; z-index: -1; width: 45vw; height: 45vw; max-width: 650px; max-height: 650px; right: -4vw; top: 9%; border: 1px solid rgba(218,190,148,.16); border-radius: 50%; box-shadow: 0 0 0 8vw rgba(255,255,255,.015), 0 0 0 16vw rgba(255,255,255,.01); }
+.page-masthead__inner { display: flex; align-items: end; justify-content: space-between; gap: 40px; }
+.page-masthead .kicker { margin-bottom: 20px; }
+.page-masthead h1 { max-width: 960px; margin: 0; font: 500 clamp(3.6rem, 7.6vw, 7.2rem)/.97 var(--serif); letter-spacing: -.045em; text-wrap: balance; }
+.page-masthead h1 em { color: var(--bronze); font-weight: 500; }
+.page-masthead__inner > div > p:not(.kicker) { max-width: 650px; margin: 28px 0 0; color: #d0d0c8; font-size: clamp(1rem, 1.25vw, 1.15rem); line-height: 1.65; }
+.page-masthead .button { margin-top: 30px; }
+.page-masthead__number { font: 500 clamp(5rem, 16vw, 15rem)/.8 var(--serif); color: rgba(255,255,255,.055); letter-spacing: -.06em; }
+.page-directory .section-head { margin-bottom: 46px; }
+.directory-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.directory-grid a { display: flex; min-height: 310px; flex-direction: column; align-items: start; position: relative; padding: clamp(24px, 3vw, 45px); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #f7f4ec; transition: background .3s ease, transform .3s ease; }
+.directory-grid a:hover, .directory-grid a:focus-visible { background: #e9e2d3; }
+.directory-grid span, .contact-options__grid span { font: 700 .68rem/1.4 var(--sans); letter-spacing: .11em; text-transform: uppercase; color: var(--bronze-dark); }
+.directory-grid strong { display: block; max-width: 12ch; margin-top: auto; font: 500 clamp(2rem, 2.75vw, 3.25rem)/1.05 var(--serif); letter-spacing: -.035em; }
+.directory-grid small { margin-top: 14px; color: #66675f; font-size: .9rem; }
+.directory-grid i { position: absolute; right: 32px; top: 28px; color: var(--bronze-dark); font: normal 1.3rem/1 var(--sans); transition: transform .25s; }
+.directory-grid a:hover i { transform: translate(4px, -4px); }
+.editorial-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 600px; background: #d8cebc; }
+.editorial-split__image { min-height: 600px; overflow: hidden; }
+.editorial-split__image img { width: 100%; height: 100%; object-fit: cover; }
+.editorial-split__copy { align-self: center; max-width: 680px; padding: clamp(40px, 7vw, 110px); }
+.editorial-split__copy h2, .closing-cta h2, .office-invite h2 { margin: 0; font: 500 clamp(2.8rem, 4.6vw, 5.4rem)/1.03 var(--serif); letter-spacing: -.045em; }
+.editorial-split__copy h2 em, .office-invite h2 em { color: #74552d; }
+.editorial-split__copy > p:not(.kicker), .office-invite p:not(.kicker) { max-width: 470px; margin: 26px 0; color: #4c4e47; line-height: 1.8; }
+.closing-cta { background: #303a30; color: #fff; padding: clamp(80px, 9vw, 135px) 0; }
+.closing-cta__inner { display: grid; grid-template-columns: 1.3fr .7fr; gap: 80px; align-items: end; }
+.closing-cta h2 em { color: var(--bronze); font-weight: 500; }
+.closing-cta__inner > div:last-child { max-width: 410px; }
+.closing-cta__inner > div:last-child p { margin: 0 0 28px; color: #c7cbc5; line-height: 1.7; }
+.drive-catalogues { background: var(--paper); }
+.drive-catalogues > .shell > .section-head { align-items: end; }
+.volume-menu { top: 10px; grid-template-columns: repeat(6, 1fr); margin-bottom: 82px; background: rgba(21,22,18,.12); }
+.volume-menu a { min-height: 58px; padding: 11px 13px; background: #fffcf6; font-size: .64rem; }
+.volume-menu a:hover { background: #29342b; }
+.catalogue-series { scroll-margin-top: 30px; }
+.drive-card { background: #fffdf8; border: 1px solid rgba(21,22,18,.1); transition: transform .3s ease, box-shadow .3s ease; }
+.drive-card:hover { transform: translateY(-4px); box-shadow: 0 22px 36px rgba(24,31,23,.12); }
+.drive-card__visual { background: #d3c5ae; }
+.drive-card__visual img { object-fit: contain; background: #e7dfd0; }
+.drive-card__body { min-height: 128px; }
+.drive-card__body span { color: #615c52; }
+.office-invite { background: #e8dfcf; }
+.office-invite__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 7vw; align-items: center; }
+.office-invite__image { min-height: 440px; }
+.office-invite__image img { width: 100%; height: 100%; max-height: 580px; object-fit: cover; }
+.office-invite .button { margin-top: 8px; }
+.note-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.note-grid article { padding: 32px; background: #fffdf8; border-top: 2px solid var(--bronze-dark); }
+.note-grid span { color: var(--bronze-dark); font: 700 .7rem/1 var(--sans); }
+.note-grid h3 { margin: 34px 0 10px; font: 500 1.65rem/1.2 var(--serif); }
+.note-grid p { margin: 0; color: #686961; font-size: .9rem; line-height: 1.65; }
+.contact-options { background: #efe9dd; }
+.contact-options__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.contact-options__grid a { display: flex; flex-direction: column; align-items: start; min-height: 320px; padding: clamp(28px, 3vw, 44px); background: #fffdf8; border-top: 3px solid #b58b56; transition: transform .25s, background .25s; }
+.contact-options__grid a:hover { transform: translateY(-4px); background: #f4eee2; }
+.contact-options__grid h2 { margin: auto 0 12px; font: 500 clamp(2.25rem, 3vw, 3.4rem)/1 var(--serif); }
+.contact-options__grid p { margin: 0 0 24px; color: #62645d; }
+.contact-options__grid strong { font: 700 .72rem/1.4 var(--sans); letter-spacing: .05em; text-transform: uppercase; }
+.footer { background: #121713; }
+.footer__top { grid-template-columns: 1.5fr .65fr .9fr 1fr; gap: clamp(25px, 4vw, 70px); }
+.footer__links a { overflow-wrap: anywhere; }
+body[data-page="contact"] .mobile-cta, body:not([data-page="home"]) .mobile-cta { opacity: 1; pointer-events: auto; transform: translateY(0); }
 
-    <div class="announcement" aria-label="Business highlights">
-      <div class="shell announcement__inner">
-        <span>Nation-wide delivery available</span>
-        <span class="announcement__dot" aria-hidden="true"></span>
-        <span>Wholesale &amp; project supply</span>
-        <span class="announcement__dot" aria-hidden="true"></span>
-        <span>Prices inclusive of GST</span>
-      </div>
-    </div>
-
-    <header class="site-header" id="top">
-      <div class="shell nav-wrap">
-        <a class="brand" href="#top" aria-label="Tayal Associates and Traders home">
-          <span class="brand__mark" aria-hidden="true">T</span>
-          <span class="brand__name">Tayal <strong>Associates</strong></span>
-        </a>
-
-        <nav class="desktop-nav" aria-label="Main navigation">
-          <a href="#wall-panels">Wall panels</a>
-          <a href="#uv-sheets">UV sheets</a>
-          <a href="#wpc-louvers">Louvers</a>
-          <a href="#designer-panels">Panels</a>
-          <a href="#treelam-volumes">Treelam</a>
-          <a href="#acp-exterior">ACP</a>
-          <a href="#decor-plast">Decor Plast</a>
-        </nav>
-
-        <div class="nav-actions">
-          <a class="button button--whatsapp button--nav" href="https://wa.me/919034458096?text=Hello%20Tayal%20Associates%20%26%20Traders%2C%20I%20would%20like%20to%20enquire%20about%20your%20products." target="_blank" rel="noreferrer">
-            WhatsApp enquiry
-          </a>
-          <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu">
-            <span></span><span></span><span></span>
-            <span class="sr-only">Open menu</span>
-          </button>
-        </div>
-      </div>
-
-      <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
-        <a href="#wall-panels">Wall panel volumes</a>
-        <a href="#uv-sheets">UV sheet volumes</a>
-        <a href="#wpc-louvers">WPC and louvers</a>
-        <a href="#designer-panels">Designer panels</a>
-        <a href="#treelam-volumes">Treelam and HDPC</a>
-        <a href="#acp-exterior">ACP and exterior</a>
-        <a href="#laminates-acrylics">Laminates and acrylics</a>
-        <a href="#decor-plast">Decor Plast</a>
-        <a href="#tayal-woto">Tayal and WOTO</a>
-        <a href="#office-portfolio">Office portfolio</a>
-        <a href="#price-other">Pricing and other</a>
-        <a href="#product-video">Product video</a>
-        <a class="button button--whatsapp" href="https://wa.me/919034458096?text=Hello%20Tayal%20Associates%20%26%20Traders%2C%20I%20would%20like%20to%20enquire%20about%20your%20products." target="_blank" rel="noreferrer">WhatsApp enquiry</a>
-      </nav>
-    </header>
-
-    <main id="main">
-      <section class="hero" aria-labelledby="hero-title">
+@media (max-width: 1180px) {
+  .desktop-nav { gap: 13px; font-size: .68rem; }
+  .nav-wrap { gap: 18px; }
+  .button--nav { padding-inline: 12px; font-size: .65rem; }
+  .volume-menu { grid-template-columns: repeat(4,1fr); }
+}
+@media (max-width: 1020px) {
+  .desktop-nav { display: none; }
+  .menu-button { display: block; }
+  .site-header { z-index: 50; }
+  .mobile-menu { overflow-y: auto; overscroll-behavior: contain; }
+  .mobile-menu a[aria-current="page"] { color: var(--bronze); }
+  .nav-wrap { display: flex; justify-content: space-between; }
+  .volume-menu { position: static; }
+}
+@media (max-width: 900px) {
+  .directory-grid, .contact-options__grid, .note-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .editorial-split { min-height: 0; }
+  .editorial-split__image { min-height: 500px; }
+  .closing-cta__inner { grid-template-columns: 1fr; gap: 30px; }
+  .office-invite__inner { gap: 30px; }
+  .volume-menu { grid-template-columns: repeat(3,1fr); }
+  .footer__top { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 680px) {
+  :root { --shell: calc(100% - 32px); }
+  .announcement__inner { justify-content: center; gap: 9px; font-size: .58rem; }
+  .announcement__inner span:nth-child(n+4) { display: none; }
+  .site-header { inset-block-start: 30px; }
+  .nav-wrap { height: 70px; }
+  .button--nav { display: none; }
+  .hero { min-height: 0; }
+  .hero h1 { font-size: clamp(3.1rem, 13vw, 4.6rem); }
+  .hero__actions { flex-wrap: wrap; }
+  .hero__index { display: none; }
+  .page-masthead { min-height: 430px; padding: 155px 0 64px; }
+  .page-masthead h1 { font-size: clamp(2.9rem, 12vw, 4.6rem); }
+  .page-masthead__inner > div > p:not(.kicker) { margin-top: 20px; line-height: 1.55; }
+  .page-masthead__number { display: none; }
+  .page-masthead::after { width: 85vw; height: 85vw; right: -40vw; }
+  .directory-grid, .contact-options__grid, .note-grid { grid-template-columns: 1fr; }
+  .directory-grid a { min-height: 215px; padding: 26px; }
+  .directory-grid strong { font-size: 2.35rem; }
+  .directory-grid i { right: 26px; top: 24px; }
+  .editorial-split { display: flex; flex-direction: column; }
+  .editorial-split__image { min-height: 330px; height: 55vw; }
+  .editorial-split__copy { padding: 56px 22px 64px; }
+  .closing-cta h2 { font-size: clamp(2.8rem, 11vw, 4.2rem); }
+  .volume-menu { display: flex; margin: 0 -16px 48px 0; padding: 2px 16px 14px 0; }
+  .volume-menu a { flex: 0 0 min(52vw,190px); min-height: 64px; }
+  .drive-grid { grid-auto-columns: min(78vw, 285px); }
+  .drive-card__body { min-height: 122px; }
+  .office-invite__inner { grid-template-columns: 1fr; }
+  .office-invite__image { min-height: 320px; }
+  .contact-options__grid a { min-height: 245px; }
+  .footer__top { grid-template-columns: 1fr; }
+  .mobile-cta { left: 8px; right: 8px; grid-template-columns: .85fr 1.25fr .7fr; }
+  .mobile-cta a { font-size: .6rem; }
+  body { padding-bottom: 64px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .button, .drive-card, .directory-grid a, .contact-options__grid a { transition: none; }
+}
+</style></head><body data-page="home"><a class="skip-link" href="#main">Skip to content</a>
+  <div class="announcement"><div class="shell announcement__inner"><span>Nation-wide delivery available</span><span class="announcement__dot" aria-hidden="true"></span><span>Wholesale &amp; project supply</span><span class="announcement__dot" aria-hidden="true"></span><span>Rohtak, Haryana</span></div></div>
+  <header class="site-header" id="top"><div class="shell nav-wrap"><a class="brand" href="index.html" aria-label="Tayal Associates and Traders home"><span class="brand__mark" aria-hidden="true">T</span><span class="brand__name">Tayal <strong>Associates</strong></span></a>
+    <nav class="desktop-nav" aria-label="Main navigation"><a href="index.html" aria-current="page">Home</a><a href="catalogues.html">Catalogues</a><a href="estimator.html">Quantity estimator</a><a href="about.html">About</a><a href="contact.html">Visit & contact</a></nav>
+    <div class="nav-actions"><a class="button button--whatsapp button--nav" href="https://wa.me/919034458096?text=Hello%20Tayal%20Associates%20%26%20Traders%2C%20I%20would%20like%20to%20enquire%20about%20your%20products." target="_blank" rel="noreferrer">WhatsApp enquiry <span aria-hidden="true">↗</span></a><button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span><span></span></button></div>
+  </div><nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden><a href="index.html" aria-current="page">Home</a><a href="catalogues.html">Catalogues</a><a href="estimator.html">Quantity estimator</a><a href="about.html">About</a><a href="contact.html">Visit & contact</a><a class="button button--whatsapp" href="https://wa.me/919034458096?text=Hello%20Tayal%20Associates%20%26%20Traders%2C%20I%20would%20like%20to%20enquire%20about%20your%20products." target="_blank" rel="noreferrer">WhatsApp enquiry</a></nav></header><main id="main">      <section class="hero" aria-labelledby="hero-title">
         <img
           class="hero__image"
           src="hero-materials-v2.png"
@@ -657,10 +734,10 @@ body.motion-ready .reveal.is-visible { opacity: 1; transform: translateY(0); }
           <h1 id="hero-title">Materials that make a <em>lasting impression.</em></h1>
           <p class="hero__lede">Explore distinctive laminates, furniture boards, ACP sheets and louvers—selected for homes, workspaces and ambitious projects.</p>
           <div class="hero__actions">
-            <a class="button button--light" href="#ready-catalogues">View product catalogues</a>
-            <a class="text-link text-link--light" href="#visit">Visit our showroom <span aria-hidden="true">↗</span></a>
+            <a class="button button--light" href="catalogues.html">View product catalogues</a>
+            <a class="text-link text-link--light" href="contact.html">Visit our showroom <span aria-hidden="true">↗</span></a>
           </div>
-          <p class="concept-note">Concept room visual · Real product catalogues available below</p>
+          <p class="concept-note">Concept room visual · Real product catalogues on the next page</p>
         </div>
         <div class="hero__index" aria-hidden="true"><span>01</span><i></i><span>04</span></div>
       </section>
@@ -674,425 +751,14 @@ body.motion-ready .reveal.is-visible { opacity: 1; transform: translateY(0); }
         </div>
       </section>
 
-      <section class="section drive-catalogues" id="ready-catalogues" aria-labelledby="ready-catalogues-title">
-        <div class="shell">
-          <div class="section-head reveal">
-            <div>
-              <p class="kicker">Ready-to-install collections</p>
-              <h2 id="ready-catalogues-title">Wall-ready surfaces. <em>No base required.</em></h2>
-            </div>
-            <div class="catalogue-lead">
-              <p>Browse real product pages from our current catalogues. Tap any card to open the complete PDF in Google Drive without downloading it first.</p>
-              <a class="text-link" href="https://drive.google.com/drive/folders/1uRGBFdRhtj2Ev6Hm7uW-DMA4PpBSwWdx" target="_blank" rel="noreferrer">View all catalogues on Drive <span aria-hidden="true">↗</span></a>
-            </div>
-          </div>
-
-          <nav class="volume-menu reveal" aria-label="Catalogue volume menu">
-            <a href="#wall-panels"><span>01</span>Wall panels</a>
-            <a href="#uv-sheets"><span>02</span>UV sheets</a>
-            <a href="#wpc-louvers"><span>03</span>WPC &amp; louvers</a>
-            <a href="#treelam-volumes"><span>04</span>Treelam &amp; HDPC</a>
-            <a href="#designer-panels"><span>05</span>Designer panels</a>
-            <a href="#acp-exterior"><span>06</span>ACP &amp; exterior</a>
-            <a href="#laminates-acrylics"><span>07</span>Laminates &amp; acrylics</a>
-            <a href="#decor-plast"><span>08</span>Decor Plast</a>
-            <a href="#tayal-woto"><span>09</span>Tayal &amp; WOTO</a>
-            <a href="#price-other"><span>10</span>Pricing &amp; other</a>
-            <a href="#office-portfolio"><span>11</span>Office portfolio</a>
-            <a href="#product-video"><span>12</span>Product video</a>
-          </nav>
-
-          <article class="catalogue-series reveal" id="wall-panels" aria-labelledby="wall-panel-series-title">
-            <div class="series-head">
-              <div><span>01</span><p>Direct-fit wall panels</p></div>
-              <div>
-                <h3 id="wall-panel-series-title">Install directly on the wall.</h3>
-                <p>These finished wall products do not require a plywood, MDF or other base layer. Choose from the catalogues below, then confirm the selected design and fitting method with our team.</p>
-                <div class="spec-row" aria-label="Product features"><span>Termite-proof</span><span>Waterproof</span><span>Fire-retardant</span><span>No base required</span></div>
-              </div>
-            </div>
-            <div class="drive-grid" id="wall-panel-catalogues" aria-label="Direct-fit wall panel catalogues"></div>
-          </article>
-
-          <article class="catalogue-series catalogue-series--uv reveal" id="uv-sheets" aria-labelledby="uv-series-title">
-            <div class="series-head">
-              <div><span>02</span><p>UV sheet collection</p></div>
-              <div>
-                <h3 id="uv-series-title">Full-size UV sheets, ready for the wall.</h3>
-                <p>UV sheets designed for direct wall installation without a separate base. Browse the four current catalogue volumes for available patterns and surface looks.</p>
-                <div class="spec-row" aria-label="UV sheet specifications"><span>8 ft length</span><span>4 ft width</span><span>Direct installation</span><span>No base required</span></div>
-              </div>
-            </div>
-            <div class="drive-grid drive-grid--uv" id="uv-catalogues" aria-label="UV sheet catalogues"></div>
-          </article>
-
-          <article class="catalogue-series reveal" id="wpc-louvers" aria-labelledby="wpc-louvers-title">
-            <div class="series-head">
-              <div><span>03</span><p>WPC and louvers</p></div>
-              <div>
-                <h3 id="wpc-louvers-title">Louvers, fluted panels and ceiling ranges.</h3>
-                <p>Browse WPC, UPVC, fluted, texture and ceiling panel catalogues. Duplicate uploads are skipped so each PDF appears only once.</p>
-              </div>
-            </div>
-            <div class="drive-grid" id="wpc-louvers-catalogues" aria-label="WPC and louver catalogues"></div>
-          </article>
-
-          <article class="catalogue-series reveal" id="treelam-volumes" aria-labelledby="treelam-series-title">
-            <div class="series-head">
-              <div><span>04</span><p>Treelam and HDPC</p></div>
-              <div>
-                <h3 id="treelam-series-title">Treelam, HDPC and wood-finish volumes.</h3>
-                <p>Explore Project X, Class, Fleek, Wallon, HDPC and wood-finish catalogues for premium interior wall and panel applications.</p>
-              </div>
-            </div>
-            <div class="drive-grid" id="treelam-catalogues" aria-label="Treelam and HDPC catalogues"></div>
-          </article>
-
-          <article class="catalogue-series reveal" id="designer-panels" aria-labelledby="designer-panels-title">
-            <div class="series-head">
-              <div><span>05</span><p>Designer panels</p></div>
-              <div>
-                <h3 id="designer-panels-title">Designer panels, PS panels and premium louvers.</h3>
-                <p>Browse the new Finesse, Flow, Stretch, Ceil Up, Elewood, Profiles, Apex, Splash, Adonis, Sculpt and Edgex uploads in one focused section.</p>
-              </div>
-            </div>
-            <div class="drive-grid" id="designer-panels-catalogues" aria-label="Designer panel catalogues"></div>
-          </article>
-
-          <article class="catalogue-series reveal" id="acp-exterior" aria-labelledby="acp-series-title">
-            <div class="series-head">
-              <div><span>06</span><p>ACP and exterior</p></div>
-              <div>
-                <h3 id="acp-series-title">ACP, metal shades and exterior finishes.</h3>
-                <p>Open ACP, Aluclad, Aludecor, Alutech, MSC, Earthcoat and rustic finish catalogues for exterior and architectural projects.</p>
-              </div>
-            </div>
-            <div class="drive-grid" id="acp-exterior-catalogues" aria-label="ACP and exterior catalogues"></div>
-          </article>
-
-          <article class="catalogue-series reveal" id="laminates-acrylics" aria-labelledby="laminates-acrylics-title">
-            <div class="series-head">
-              <div><span>07</span><p>Laminates and acrylics</p></div>
-              <div>
-                <h3 id="laminates-acrylics-title">Laminates, acrylics and wood-finish surfaces.</h3>
-                <p>Explore Vivre, Vivasaa, Woodness, Quarry, Lamina and AcryPedia catalogues for decorative surface selections.</p>
-              </div>
-            </div>
-            <div class="drive-grid" id="laminates-acrylics-catalogues" aria-label="Laminates and acrylics catalogues"></div>
-          </article>
-
-          <article class="catalogue-series reveal" id="decor-plast" aria-labelledby="decor-plast-title">
-            <div class="series-head">
-              <div><span>08</span><p>Decor Plast</p></div>
-              <div>
-                <h3 id="decor-plast-title">Decor Plast brochures and albums.</h3>
-                <p>Keep the Decor Plast brochure, Platinum collection, general album and furniture album together for quick comparison.</p>
-              </div>
-            </div>
-            <div class="drive-grid" id="decor-plast-catalogues" aria-label="Decor Plast catalogues"></div>
-          </article>
-
-          <article class="catalogue-series reveal" id="tayal-woto" aria-labelledby="tayal-woto-title">
-            <div class="series-head">
-              <div><span>09</span><p>Tayal and WOTO</p></div>
-              <div>
-                <h3 id="tayal-woto-title">Official Tayal Associates catalogue volumes.</h3>
-                <p>Browse ATOM and WOTO catalogues from Tayal Associates and Traders in one dedicated section.</p>
-              </div>
-            </div>
-            <div class="drive-grid drive-grid--short" id="tayal-woto-catalogues" aria-label="Tayal and WOTO catalogues"></div>
-          </article>
-
-          <article class="catalogue-series reveal" id="price-other" aria-labelledby="price-other-title">
-            <div class="series-head">
-              <div><span>10</span><p>Pricing and other</p></div>
-              <div>
-                <h3 id="price-other-title">Cost, luxury and additional catalogue references.</h3>
-                <p>Keep these handy for cost volumes, other collections and premium material references. Please confirm final pricing before purchasing.</p>
-              </div>
-            </div>
-            <div class="drive-grid" id="price-other-catalogues" aria-label="Pricing and other catalogues"></div>
-          </article>
-
-          <article class="catalogue-series reveal" id="office-portfolio" aria-labelledby="office-portfolio-title">
-            <div class="series-head">
-              <div><span>11</span><p>Office portfolio</p></div>
-              <div>
-                <h3 id="office-portfolio-title">See the Tayal Associates office.</h3>
-                <p>Open the office photo PDF to see our showroom and workspace reference before you plan a visit.</p>
-              </div>
-            </div>
-            <div class="drive-grid drive-grid--short" id="office-catalogues" aria-label="Office portfolio PDF"></div>
-          </article>
-
-          <article class="catalogue-series reveal" id="product-video" aria-labelledby="video-series-title">
-            <div class="series-head">
-              <div><span>12</span><p>Product video</p></div>
-              <div>
-                <h3 id="video-series-title">See the finish in motion.</h3>
-                <p>Play the product video here or open the original in Google Drive.</p>
-              </div>
-            </div>
-            <div id="catalogue-video"></div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section collection" id="collection" aria-labelledby="collection-title" hidden>
-        <div class="shell">
-          <div class="section-head reveal">
-            <div>
-              <p class="kicker">The surface library</p>
-              <h2 id="collection-title">Begin with the <em>material.</em></h2>
-            </div>
-            <p>From furniture-ready boards to architectural facades, explore our core categories and enquire with one clear reference.</p>
-          </div>
-
-          <div class="category-grid">
-            <a class="category-card category-card--large reveal" href="#catalogue" data-jump-filter="pvc">
-              <span class="category-card__number">01</span>
-              <div class="material material--pvc" aria-hidden="true"><span></span></div>
-              <div class="category-card__copy"><p>Best seller</p><h3>PVC furniture boards</h3><span>Explore collection →</span></div>
-            </a>
-            <a class="category-card reveal" href="#catalogue" data-jump-filter="acp">
-              <span class="category-card__number">02</span>
-              <div class="material material--acp" aria-hidden="true"><span></span></div>
-              <div class="category-card__copy"><p>Exterior surfaces</p><h3>ACP sheets</h3><span>Explore collection →</span></div>
-            </a>
-            <a class="category-card reveal" href="#catalogue" data-jump-filter="louvers">
-              <span class="category-card__number">03</span>
-              <div class="material material--louver" aria-hidden="true"><span></span></div>
-              <div class="category-card__copy"><p>Architectural detail</p><h3>Charcoal louvers</h3><span>Explore collection →</span></div>
-            </a>
-            <a class="category-card reveal" href="#catalogue" data-jump-filter="laminates">
-              <span class="category-card__number">04</span>
-              <div class="material material--laminate" aria-hidden="true"><span></span></div>
-              <div class="category-card__copy"><p>Interior finishes</p><h3>Laminates</h3><span>Explore collection →</span></div>
-            </a>
-            <a class="category-card reveal" href="#catalogue" data-jump-filter="pvc">
-              <span class="category-card__number">05</span>
-              <div class="material material--board" aria-hidden="true"><span></span></div>
-              <div class="category-card__copy"><p>Versatile substrates</p><h3>PVC boards</h3><span>Explore collection →</span></div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section catalogue" id="catalogue" aria-labelledby="catalogue-title" hidden>
-        <div class="shell">
-          <div class="catalogue__intro reveal">
-            <p class="kicker kicker--light">Curated catalogue</p>
-            <h2 id="catalogue-title">Find the right surface for your space.</h2>
-            <p>Browse the current category showcase. Exact product photographs, official codes, specifications and live prices will be added from the showroom catalogues.</p>
-          </div>
-
-          <div class="catalogue-tools reveal">
-            <label class="search-field">
-              <span class="sr-only">Search catalogue categories</span>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
-              <input id="catalogue-search" type="search" placeholder="Search material or application" autocomplete="off" />
-            </label>
-            <div class="filter-list" aria-label="Filter catalogue">
-              <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">All</button>
-              <button class="filter-chip" type="button" data-filter="interior" aria-pressed="false">Interior</button>
-              <button class="filter-chip" type="button" data-filter="exterior" aria-pressed="false">Exterior</button>
-              <button class="filter-chip" type="button" data-filter="pvc" aria-pressed="false">PVC</button>
-              <button class="filter-chip" type="button" data-filter="louvers" aria-pressed="false">Louvers</button>
-            </div>
-            <p class="results-count" id="results-count" aria-live="polite">6 categories shown</p>
-          </div>
-
-          <div class="product-grid" id="product-grid">
-            <article class="product-card reveal" data-id="pvc-furniture-board" data-name="PVC Furniture Board" data-tags="pvc interior furniture cabinet moisture resistant">
-              <div class="product-card__visual product-card__visual--pvc">
-                <span class="product-card__badge">Best seller</span>
-                <button class="save-button" type="button" aria-label="Save PVC Furniture Board" aria-pressed="false">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.7-7.5 1.1-1.1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
-                </button>
-                <span class="sample-label">Material study</span>
-              </div>
-              <div class="product-card__body">
-                <div><p>PVC · Interior</p><h3>PVC Furniture Board</h3></div>
-                <p class="product-card__description">A practical furniture substrate for cabinetry and fitted interiors. Confirm sizes, thicknesses and finish options with our team.</p>
-                <div class="product-card__meta"><span>Price on request</span><span>Code with catalogue</span></div>
-                <a class="product-enquiry" data-product="PVC Furniture Board" href="#">Enquire on WhatsApp <span aria-hidden="true">↗</span></a>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-id="acp-sheets" data-name="ACP Sheets" data-tags="acp exterior facade cladding commercial">
-              <div class="product-card__visual product-card__visual--acp">
-                <span class="product-card__badge">Best seller</span>
-                <button class="save-button" type="button" aria-label="Save ACP Sheets" aria-pressed="false">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.7-7.5 1.1-1.1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
-                </button>
-                <span class="sample-label">Material study</span>
-              </div>
-              <div class="product-card__body">
-                <div><p>ACP · Exterior</p><h3>ACP Sheets</h3></div>
-                <p class="product-card__description">Clean, contemporary facade material for architectural and commercial applications. Warranty coverage varies by exterior product.</p>
-                <div class="product-card__meta"><span>Price on request</span><span>Code with catalogue</span></div>
-                <a class="product-enquiry" data-product="ACP Sheets" href="#">Enquire on WhatsApp <span aria-hidden="true">↗</span></a>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-id="charcoal-louvers" data-name="Charcoal Louvers" data-tags="louvers charcoal interior wall panel fluted decorative">
-              <div class="product-card__visual product-card__visual--charcoal">
-                <span class="product-card__badge">Best seller</span>
-                <button class="save-button" type="button" aria-label="Save Charcoal Louvers" aria-pressed="false">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.7-7.5 1.1-1.1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
-                </button>
-                <span class="sample-label">Material study</span>
-              </div>
-              <div class="product-card__body">
-                <div><p>Louvers · Interior</p><h3>Charcoal Louvers</h3></div>
-                <p class="product-card__description">Fluted wall detailing that adds rhythm, depth and a crafted architectural finish to feature areas.</p>
-                <div class="product-card__meta"><span>Price on request</span><span>Code with catalogue</span></div>
-                <a class="product-enquiry" data-product="Charcoal Louvers" href="#">Enquire on WhatsApp <span aria-hidden="true">↗</span></a>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-id="laminates" data-name="Laminates" data-tags="laminates interior furniture woodgrain solid decorative kitchen office">
-              <div class="product-card__visual product-card__visual--laminate">
-                <button class="save-button" type="button" aria-label="Save Laminates" aria-pressed="false">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.7-7.5 1.1-1.1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
-                </button>
-                <span class="sample-label">Material study</span>
-              </div>
-              <div class="product-card__body">
-                <div><p>Laminates · Interior</p><h3>Decorative Laminates</h3></div>
-                <p class="product-card__description">A broad finish palette for furniture and interior surfaces, from subtle solids to expressive woodgrains.</p>
-                <div class="product-card__meta"><span>Price on request</span><span>Code with catalogue</span></div>
-                <a class="product-enquiry" data-product="Decorative Laminates" href="#">Enquire on WhatsApp <span aria-hidden="true">↗</span></a>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-id="pvc-boards" data-name="PVC Boards" data-tags="pvc boards interior furniture partition utility">
-              <div class="product-card__visual product-card__visual--board">
-                <button class="save-button" type="button" aria-label="Save PVC Boards" aria-pressed="false">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.7-7.5 1.1-1.1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
-                </button>
-                <span class="sample-label">Material study</span>
-              </div>
-              <div class="product-card__body">
-                <div><p>PVC · Interior</p><h3>PVC Boards</h3></div>
-                <p class="product-card__description">Versatile board solutions for interior furniture, partitions and practical built-in applications.</p>
-                <div class="product-card__meta"><span>Price on request</span><span>Code with catalogue</span></div>
-                <a class="product-enquiry" data-product="PVC Boards" href="#">Enquire on WhatsApp <span aria-hidden="true">↗</span></a>
-              </div>
-            </article>
-
-            <article class="product-card reveal" data-id="architectural-louvers" data-name="Architectural Louvers" data-tags="louvers interior exterior wall ceiling decorative cladding">
-              <div class="product-card__visual product-card__visual--louver">
-                <button class="save-button" type="button" aria-label="Save Architectural Louvers" aria-pressed="false">
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.7-7.5 1.1-1.1a5.5 5.5 0 0 0 0-7.8Z"/></svg>
-                </button>
-                <span class="sample-label">Material study</span>
-              </div>
-              <div class="product-card__body">
-                <div><p>Louvers · Interior / Exterior</p><h3>Architectural Louvers</h3></div>
-                <p class="product-card__description">Linear profiles for feature walls, ceilings and selected exterior expressions. Suitability depends on the chosen range.</p>
-                <div class="product-card__meta"><span>Price on request</span><span>Code with catalogue</span></div>
-                <a class="product-enquiry" data-product="Architectural Louvers" href="#">Enquire on WhatsApp <span aria-hidden="true">↗</span></a>
-              </div>
-            </article>
-          </div>
-
-          <div class="catalogue-empty" id="catalogue-empty" hidden>
-            <h3>No matching material found</h3>
-            <p>Try a broader search or choose “All”. You can also ask us directly on WhatsApp.</p>
-          </div>
-
-          <div class="price-note reveal">
-            <span aria-hidden="true">i</span>
-            <p><strong>Transparent pricing, confirmed personally.</strong> Prices are inclusive of GST and may change with market conditions. Please confirm the latest price through WhatsApp before purchasing.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="brands" id="brands" aria-labelledby="brands-title">
-        <div class="shell brands__inner reveal">
-          <div class="brands__copy">
-            <p class="kicker">Brands we work with</p>
-            <h2 id="brands-title">Trusted names.<br /><em>Considered choices.</em></h2>
-            <p>Explore leading material ranges at our Rohtak showroom. Availability varies by collection—message us before visiting for a specific range.</p>
-          </div>
-          <div class="brand-list" aria-label="Popular brands">
-            <div><span>01</span><strong>Treelam</strong></div>
-            <div><span>02</span><strong>Alutech</strong></div>
-            <div><span>03</span><strong>Aludecor</strong></div>
-            <div><span>04</span><strong>MNH</strong></div>
-            <div><span>05</span><strong>Vivre</strong></div>
-            <div><span>06</span><strong>Lamiq</strong></div>
-            <div><span>07</span><strong>Heights</strong></div>
-            <div><span>08</span><strong>Future D.Plast</strong></div>
-            <div><span>09</span><strong>Euro Pratik</strong></div>
-            <div><span>10</span><strong>Saint-Gobain</strong></div>
-            <div><span>11</span><strong>Decor Plast</strong></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section services" id="services" aria-labelledby="services-title">
-        <div class="shell">
-          <div class="section-head reveal">
-            <div><p class="kicker">Beyond the catalogue</p><h2 id="services-title">Guidance from selection to <em>site.</em></h2></div>
-            <p>Bring a reference image, drawing or rough dimensions. We’ll help narrow the material, finish and practical next step.</p>
-          </div>
-
-          <div class="service-layout">
-            <div class="service-feature reveal">
-              <span class="service-feature__index">01</span>
-              <div>
-                <p class="kicker kicker--light">Design consultation</p>
-                <h3>See, compare and decide with confidence.</h3>
-                <p>In-store product and design consultation is free. Home or site consultation can also be arranged; visit or consultation charges may apply.</p>
-                <a class="text-link text-link--light" href="https://wa.me/919034458096?text=Hello%20Tayal%20Associates%20%26%20Traders%2C%20I%20would%20like%20to%20discuss%20a%20design%20consultation." target="_blank" rel="noreferrer">Discuss your requirement <span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
-            <div class="service-list reveal">
-              <article><span>02</span><div><h3>Site measurement &amp; visits</h3><p>Support for understanding real dimensions and project context before material finalisation.</p></div></article>
-              <article><span>03</span><div><h3>Installation assistance</h3><p>Practical product guidance plus contractor or fitter contacts where available.</p></div></article>
-              <article><span>04</span><div><h3>Bulk &amp; project supply</h3><p>Dedicated wholesale and project pricing for builders, contractors and commercial requirements.</p></div></article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="calculator" id="calculator" aria-labelledby="calculator-title">
-        <div class="shell calculator__grid">
-          <div class="calculator__copy reveal">
-            <p class="kicker kicker--light">Material quantity estimator</p>
-            <h2 id="calculator-title">Plan the quantity.<br /><em>Not the price.</em></h2>
-            <p>Estimate how many pieces may be required for a wall or surface. Enter both dimensions in metres, feet, inches, centimetres or millimetres.</p>
-            <ul>
-              <li>Useful for sheets, panels and repeat-size surfaces</li>
-              <li>Includes an optional wastage allowance</li>
-              <li>Final quantity should be confirmed after site measurement</li>
-            </ul>
-          </div>
-
-          <form class="calculator-card reveal" id="quantity-form">
-            <div class="calculator-card__head"><span>01</span><h3>Surface dimensions</h3><select class="unit-picker" id="surface-unit" aria-label="Surface dimension unit"><option value="m">Metres (m)</option><option value="ft" selected>Feet (ft)</option><option value="in">Inches (in)</option><option value="cm">Centimetres (cm)</option><option value="mm">Millimetres (mm)</option></select></div>
-            <div class="field-grid">
-              <label><span>Width</span><div class="input-wrap"><input id="surface-width" name="surface-width" type="number" min="0.1" step="0.1" placeholder="12" required /><span data-surface-unit-label>ft</span></div></label>
-              <label><span>Height</span><div class="input-wrap"><input id="surface-height" name="surface-height" type="number" min="0.1" step="0.1" placeholder="10" required /><span data-surface-unit-label>ft</span></div></label>
-            </div>
-            <div class="calculator-card__head"><span>02</span><h3>Product dimensions</h3><select class="unit-picker" id="product-unit" aria-label="Product dimension unit"><option value="m">Metres (m)</option><option value="ft">Feet (ft)</option><option value="in">Inches (in)</option><option value="cm">Centimetres (cm)</option><option value="mm" selected>Millimetres (mm)</option></select></div>
-            <div class="field-grid">
-              <label><span>Product width</span><div class="input-wrap"><input id="product-width" name="product-width" type="number" min="1" step="1" placeholder="1220" required /><span data-product-unit-label>mm</span></div></label>
-              <label><span>Product height</span><div class="input-wrap"><input id="product-height" name="product-height" type="number" min="1" step="1" placeholder="2440" required /><span data-product-unit-label>mm</span></div></label>
-            </div>
-            <label class="range-field"><span>Wastage allowance <output id="wastage-output">10%</output></span><input id="wastage" name="wastage" type="range" min="0" max="25" step="1" value="10" /></label>
-            <button class="button button--dark" type="submit">Calculate quantity</button>
-            <div class="calculator-result" id="calculator-result" aria-live="polite" hidden>
-              <p>Approximate requirement</p><strong><span id="pieces-result">0</span> pieces</strong><small id="area-result"></small>
-            </div>
-            <p class="calculator-disclaimer">This is a planning estimate only. Layout, cuts, joins and site conditions can change the final requirement.</p>
-          </form>
-        </div>
-      </section>
-
-      <section class="project-supply" aria-labelledby="project-title">
+<section class="page-directory section"><div class="shell"><div class="section-head"><div><p class="kicker">Explore by material</p><h2>Find a finish for <em>your space.</em></h2></div><p>Choose a category to see its current PDF volumes. Every catalogue opens in Google Drive.</p></div><div class="directory-grid">
+  <a href="catalogues.html#wall-panels"><span>01 / Direct fit</span><strong>Wall panels</strong><small>Finished surfaces for direct wall installation</small><i aria-hidden="true">↗</i></a>
+  <a href="catalogues.html#uv-sheets"><span>02 / Full size</span><strong>UV sheets</strong><small>8 × 4 ft sheet collections</small><i aria-hidden="true">↗</i></a>
+  <a href="catalogues.html#wpc-louvers"><span>03 / Texture</span><strong>WPC &amp; louvers</strong><small>Fluted walls, ceilings and detail</small><i aria-hidden="true">↗</i></a>
+  <a href="catalogues.html#acp-exterior"><span>04 / Architecture</span><strong>ACP &amp; exterior</strong><small>Facade and outdoor finishes</small><i aria-hidden="true">↗</i></a>
+  <a href="catalogues.html#laminates-acrylics"><span>05 / Detail</span><strong>Laminates &amp; acrylics</strong><small>Decorative interior surfaces</small><i aria-hidden="true">↗</i></a>
+  <a href="catalogues.html#treelam-volumes"><span>06 / More</span><strong>All collections</strong><small>Treelam, designer panels and more</small><i aria-hidden="true">↗</i></a>
+  </div></div></section><section class="editorial-split"><div class="editorial-split__image"><img src="tayal5-product.jpg" alt="Decorative wall panel finish from the Tayal catalogue" loading="lazy"></div><div class="editorial-split__copy"><p class="kicker">Designed for real spaces</p><h2>From an idea to the <em>right material.</em></h2><p>Browse the real catalogue covers, compare collections and bring your shortlist to our Rohtak team. We can help with finishes, dimensions and project quantities.</p><a class="text-link" href="about.html">How we help <span aria-hidden="true">↗</span></a></div></section>      <section class="project-supply" aria-labelledby="project-title">
         <div class="shell project-supply__grid reveal">
           <div class="project-supply__number">60K<span>+</span></div>
           <div class="project-supply__copy">
@@ -1107,81 +773,13 @@ body.motion-ready .reveal.is-visible { opacity: 1; transform: translateY(0); }
         </div>
       </section>
 
-      <section class="visit" id="visit" aria-labelledby="visit-title">
-        <div class="visit__panel reveal">
-          <div class="visit__map" aria-hidden="true">
-            <div class="map-grid"></div>
-            <span class="map-road map-road--one"></span><span class="map-road map-road--two"></span><span class="map-road map-road--three"></span>
-            <span class="map-pin"><i>T</i></span>
-            <p>Near Bhiwani Chungi</p>
-          </div>
-          <div class="visit__content">
-            <p class="kicker kicker--light">Visit the showroom</p>
-            <h2 id="visit-title">See the finish.<br /><em>Feel the difference.</em></h2>
-            <address>Hisar Bhiwani Link Road<br />Near Bhiwani Chungi<br />Rohtak, Haryana</address>
-            <div class="hours">
-              <div><span>Mon—Sat</span><strong>10:00 AM — 8:00 PM</strong></div>
-              <div><span>Sunday</span><strong>10:00 AM — 2:00 PM</strong></div>
-            </div>
-            <div class="visit__actions">
-              <a class="button button--light" href="https://www.google.com/maps/search/?api=1&amp;query=Tayal%20Associates%20and%20Traders%2C%20Hisar%20Bhiwani%20Link%20Road%2C%20Near%20Bhiwani%20Chungi%2C%20Rohtak%2C%20Haryana" target="_blank" rel="noreferrer">Get directions</a>
-              <a class="text-link text-link--light" href="https://wa.me/919034458096?text=Hello%20Tayal%20Associates%20%26%20Traders%2C%20I%20plan%20to%20visit%20your%20showroom.%20Please%20share%20the%20location." target="_blank" rel="noreferrer">Ask on WhatsApp <span aria-hidden="true">↗</span></a>
-              <a class="text-link text-link--light" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=tayalassociatesandtraders@gmail.com" target="_blank" rel="noreferrer">Email enquiries <span aria-hidden="true">↗</span></a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="shell footer__top">
-        <div>
-          <a class="brand brand--footer" href="#top"><span class="brand__mark" aria-hidden="true">T</span><span class="brand__name">Tayal <strong>Associates</strong></span></a>
-          <p>Interior and exterior materials for considered spaces, supplied from Rohtak to projects across India.</p>
-        </div>
-        <div class="footer__links"><p>Catalogue volumes</p><a href="#wall-panels">Wall panels</a><a href="#uv-sheets">UV sheets</a><a href="#wpc-louvers">WPC and louvers</a><a href="#treelam-volumes">Treelam and HDPC</a><a href="#designer-panels">Designer panels</a><a href="#acp-exterior">ACP and exterior</a><a href="#laminates-acrylics">Laminates and acrylics</a><a href="#decor-plast">Decor Plast</a><a href="#tayal-woto">Tayal and WOTO</a><a href="#price-other">Pricing and other</a><a href="#office-portfolio">Office portfolio</a><a href="#product-video">Product video</a></div>
-        <div class="footer__links"><p>Visit</p><a href="#visit">Showroom &amp; hours</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Tayal%20Associates%20and%20Traders%2C%20Rohtak%2C%20Haryana" target="_blank" rel="noreferrer">Get directions</a><a href="https://wa.me/919034458096" target="_blank" rel="noreferrer">WhatsApp: 9034458096</a><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=tayalassociatesandtraders@gmail.com" target="_blank" rel="noreferrer">tayalassociatesandtraders@gmail.com</a></div>
-        <div class="footer__cta"><p>Have a reference image or material code?</p><a class="button button--whatsapp" href="https://wa.me/919034458096?text=Hello%20Tayal%20Associates%20%26%20Traders%2C%20I%20have%20a%20material%20reference%20to%20share." target="_blank" rel="noreferrer">Start an enquiry</a></div>
-      </div>
-      <div class="shell footer__bottom"><span>© <span id="current-year"></span> Tayal Associates &amp; Traders</span><span>Rohtak, Haryana</span></div>
-    </footer>
-
-    <div class="mobile-cta" aria-label="Quick enquiry" aria-hidden="true">
-      <a href="https://www.google.com/maps/search/?api=1&amp;query=Tayal%20Associates%20and%20Traders%2C%20Rohtak%2C%20Haryana" target="_blank" rel="noreferrer">Directions</a>
-      <a class="mobile-cta__primary" href="https://wa.me/919034458096?text=Hello%20Tayal%20Associates%20%26%20Traders%2C%20I%20would%20like%20to%20enquire%20about%20your%20products." target="_blank" rel="noreferrer">WhatsApp enquiry</a>
-      <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=tayalassociatesandtraders@gmail.com" target="_blank" rel="noreferrer">Email</a>
-    </div>
-
-    <div class="drawer-overlay" data-close-drawer hidden></div>
-    <aside class="favourites-drawer" aria-labelledby="favourites-title" aria-hidden="true" hidden>
-      <div class="favourites-drawer__head"><div><p>Saved on this device</p><h2 id="favourites-title">Your favourites</h2></div><button type="button" class="drawer-close" data-close-drawer aria-label="Close favourites">×</button></div>
-      <div class="favourites-drawer__body" id="favourites-list"></div>
-      <div class="favourites-drawer__foot"><p>Device-only favourites are private to this browser. Account syncing can be added when the website backend is connected.</p><a class="button button--dark" id="enquire-favourites" href="https://wa.me/919034458096" target="_blank" rel="noreferrer">Enquire about saved items</a></div>
-    </aside>
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "HomeAndConstructionBusiness",
-        "name": "Tayal Associates and Traders",
-        "description": "Interior and exterior products and materials showroom in Rohtak, Haryana.",
-        "telephone": "+919034458096",
-        "email": "tayalassociatesandtraders@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Hisar Bhiwani Link Road, Near Bhiwani Chungi",
-          "addressLocality": "Rohtak",
-          "addressRegion": "Haryana",
-          "addressCountry": "IN"
-        },
-        "openingHoursSpecification": [
-          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "10:00", "closes": "20:00" },
-          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "14:00" }
-        ]
-      }
-    </script>
-    <script>
-(() => {
+<section class="closing-cta"><div class="shell closing-cta__inner"><div><p class="kicker kicker--light">The next step</p><h2>Bring us your idea.<br><em>We'll help find the finish.</em></h2></div><div><p>Share a reference image, material code or rough dimensions. Our team can guide your selection and confirm availability.</p><a class="button button--light" href="https://wa.me/919034458096?text=Hello%20Tayal%20Associates%20%26%20Traders%2C%20I%20would%20like%20to%20enquire%20about%20your%20products." target="_blank" rel="noreferrer">Start an enquiry <span aria-hidden="true">↗</span></a></div></div></section></main><footer class="footer"><div class="shell footer__top">
+    <div><a class="brand" href="index.html" aria-label="Tayal Associates and Traders home"><span class="brand__mark" aria-hidden="true">T</span><span class="brand__name">Tayal <strong>Associates</strong></span></a><p>Interior and exterior surface materials for considered spaces. Supplied from Rohtak to projects across India.</p></div>
+    <div class="footer__links"><p>Explore</p><a href="index.html">Home</a><a href="catalogues.html">Catalogues</a><a href="estimator.html">Quantity estimator</a><a href="about.html">About</a><a href="contact.html">Visit & contact</a></div>
+    <div class="footer__links"><p>Popular collections</p><a href="catalogues.html#wall-panels">Wall panels</a><a href="catalogues.html#uv-sheets">UV sheets</a><a href="catalogues.html#wpc-louvers">WPC &amp; louvers</a><a href="catalogues.html#acp-exterior">ACP &amp; exterior</a></div>
+    <div class="footer__links"><p>Get in touch</p><a href="https://www.google.com/maps/search/?api=1&amp;query=Tayal%20Associates%20and%20Traders%2C%20Hisar%20Bhiwani%20Link%20Road%2C%20Near%20Bhiwani%20Chungi%2C%20Rohtak%2C%20Haryana" target="_blank" rel="noreferrer">Rohtak showroom ↗</a><a href="https://wa.me/919034458096?text=Hello%20Tayal%20Associates%20%26%20Traders%2C%20I%20would%20like%20to%20enquire%20about%20your%20products." target="_blank" rel="noreferrer">+91 90344 58096</a><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=tayalassociatesandtraders@gmail.com" target="_blank" rel="noreferrer">Email enquiries ↗</a></div>
+  </div><div class="shell footer__bottom"><span>© <span id="current-year"></span> Tayal Associates &amp; Traders</span><span>Hisar Bhiwani Link Road · Rohtak, Haryana</span></div></footer>
+  <div class="mobile-cta" aria-label="Quick enquiry"><a href="https://www.google.com/maps/search/?api=1&amp;query=Tayal%20Associates%20and%20Traders%2C%20Hisar%20Bhiwani%20Link%20Road%2C%20Near%20Bhiwani%20Chungi%2C%20Rohtak%2C%20Haryana" target="_blank" rel="noreferrer">Directions</a><a class="mobile-cta__primary" href="https://wa.me/919034458096?text=Hello%20Tayal%20Associates%20%26%20Traders%2C%20I%20would%20like%20to%20enquire%20about%20your%20products." target="_blank" rel="noreferrer">WhatsApp</a><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=tayalassociatesandtraders@gmail.com" target="_blank" rel="noreferrer">Email</a></div><script>(() => {
   const driveCatalogues = {
     wall: [
       { title: "Tayal Wall Panel Vol. 1", meta: "Ready-to-install wall panel", image: "tayal1-product.jpg", fileId: "1BoL3hvQIzz1MuhAQ6EL6opCE3OVWNCAH" },
@@ -1306,6 +904,11 @@ body.motion-ready .reveal.is-visible { opacity: 1; transform: translateY(0); }
         ? `<img src="${item.image}" alt="${item.title} cover" loading="lazy" decoding="async"><span class="drive-card__volume">${number}</span>`
         : `<div class="drive-card__placeholder"><span>PDF</span><strong>${item.cover || item.title}</strong></div><span class="drive-card__volume">${number}</span>`;
       card.innerHTML = `<div class="drive-card__visual">${visual}</div><div class="drive-card__body"><strong>${item.title}</strong><small>${item.meta}</small><span>Open on Drive <i aria-hidden="true">↗</i></span></div>`;
+      const cover = card.querySelector("img");
+      cover?.addEventListener("error", () => {
+        const visualBox = card.querySelector(".drive-card__visual");
+        visualBox.innerHTML = `<div class="drive-card__placeholder"><span>Catalogue</span><strong>${item.title}</strong></div><span class="drive-card__volume">${number}</span>`;
+      }, { once: true });
       fragment.append(card);
     });
     target.append(fragment);
@@ -1337,6 +940,7 @@ body.motion-ready .reveal.is-visible { opacity: 1; transform: translateY(0); }
     document.body.classList.toggle("menu-open", open);
   };
   menuButton?.addEventListener("click", () => setMenu(menuButton.getAttribute("aria-expanded") !== "true"));
+  menuButton?.addEventListener("click", () => menuButton.setAttribute("aria-label", menuButton.getAttribute("aria-expanded") === "true" ? "Close menu" : "Open menu"));
   mobileMenu?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setMenu(false)));
 
   const desktopMenuQuery = window.matchMedia("(min-width: 1021px)");
@@ -1357,6 +961,10 @@ body.motion-ready .reveal.is-visible { opacity: 1; transform: translateY(0); }
   }
 
   const quantityForm = document.querySelector("#quantity-form");
+  quantityForm?.querySelectorAll('input[type="number"]').forEach((input) => {
+    input.min = "0.001";
+    input.step = "any";
+  });
   const wastageInput = document.querySelector("#wastage");
   const wastageOutput = document.querySelector("#wastage-output");
   const unitToMeters = { m: 1, ft: 0.3048, in: 0.0254, cm: 0.01, mm: 0.001 };
@@ -1395,7 +1003,14 @@ body.motion-ready .reveal.is-visible { opacity: 1; transform: translateY(0); }
     result.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "nearest" });
   });
 
-  document.querySelector("#current-year").textContent = String(new Date().getFullYear());
+  document.querySelector("#current-year")?.replaceChildren(String(new Date().getFullYear()));
+  if (document.body.dataset.page === "home") {
+    const oldCatalogueSections = new Set(["ready-catalogues", "wall-panels", "uv-sheets", "wpc-louvers", "treelam-volumes", "designer-panels", "acp-exterior", "laminates-acrylics", "decor-plast", "tayal-woto", "price-other", "office-portfolio", "product-video"]);
+    const oldPageSections = { calculator: "estimator.html", brands: "about.html", services: "about.html", visit: "contact.html" };
+    const hash = decodeURIComponent(location.hash.slice(1));
+    if (oldCatalogueSections.has(hash)) location.replace(`catalogues.html#${hash === "ready-catalogues" ? "catalogue-collections" : hash}`);
+    else if (oldPageSections[hash]) location.replace(oldPageSections[hash]);
+  }
   const revealItems = [...document.querySelectorAll(".reveal")];
   if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     revealItems.forEach((item) => item.classList.add("is-visible"));
@@ -1414,7 +1029,4 @@ body.motion-ready .reveal.is-visible { opacity: 1; transform: translateY(0); }
     if (event.key === "Escape") setMenu(false);
   });
 })();
-
-    </script>
-  </body>
-</html>
+</script></body></html>
